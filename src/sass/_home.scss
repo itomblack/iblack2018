@@ -26,3 +26,50 @@ html, body {
 // HOME STLYES
 //===============================================================================
 
+//header
+.header-wrap {
+  margin-top: $reg-pad;
+  position: absolute;
+  width: 100%;
+}
+
+
+//sections
+.section-text {
+  height: calc( 110vh ); 
+  display: flex;
+  align-items: center;
+}
+
+.content-cent {
+  max-width: 570px;
+}
+
+
+.section-work {
+  height: 1000px;
+  position: relative;
+}
+
+.mid-title-wrap {
+  height: 350px;
+  border-left: 1px solid $blue1;
+  position: absolute;
+  left: 50%;
+  top: -175px;
+  padding-left: $reg-pad;
+  display: flex;
+  align-items: flex-end;
+  
+  h2 { margin-bottom: $sml-pad;}
+  h5 { margin-bottom: 0; }
+}
+
+
+
+
+
+
+
+
+

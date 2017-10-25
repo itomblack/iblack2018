@@ -1,3 +1,79 @@
 //===============================================================================
 // FONTS
 //===============================================================================
+
+.serif { 
+  font-family: 'Playfair Display', serif;
+}
+
+.sans { 
+  font-family: 'Lato', sans-serif;
+}
+
+//set Rem size
+body { 
+  font-size: 16px;
+  font-weight: light;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  line-height: 1.333em;
+  margin-bottom: 1.33rem;
+
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+}
+
+h4, h5, h6, p {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+}
+
+
+
+h1 {
+  font-size: 3.157rem;
+}
+
+h2 {
+  font-size: 3.157rem;
+}
+
+h3 {
+  font-size: 2.369rem;
+}
+
+h4 {
+  font-size: 1.777rem;
+}
+
+h5 {
+  font-size: 1.333rem;
+}
+
+.sub-p {
+  font-size: 1rem;
+}
+
+.link-blue2 {
+  color: $blue2;
+  text-decoration: none;
+  h5, p, span { display: inline; border-bottom: 1px solid $blue2; }
+
+  &:hover { 
+    color: $blue3;
+    h5, p, span { display: inline; border-bottom: 1px solid $blue3; }
+  }
+}
+
+
+
+
+
+
+
+
+

@@ -1,6 +1,21 @@
 (function () { 'use strict';
 
-  console.log('test1234');
+  // new Vue({
+  //   el: '#app',
+  //   data: {
+  //     message: 'Hello Vue.js!'
+  //   }
+  // })
+
+
+  // // register
+  // Vue.component('header-bar', {
+  //   template: ''
+  // })
+  // // create a root instance
+  // new Vue({
+  //   el: '#header'
+  // })
 
 
 
