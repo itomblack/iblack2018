@@ -3,49 +3,70 @@
 <head>
   @@include('./inc/head.html')
   
-  <title>iBlack</title> <!-- ADD A TITLE! -->
+  <title>iBlack</title>
   
   
 </head>
 <body>
   
-  <div class="header-wrap">
-    <div class="grid outer-pad col-1-1">
-      <img src="/img/global/logoIb.svg" alt="iblack logo" class="" />
-    </div>
-  </div>
-
-  <div class="section-text bg-ink grid outer-pad col-1-1">
-    <div class="content-cent">
-      <h1>Designer /</br>Human Being.</h1>
-      <h4>Helping brands &amp; startups to refine, design &amp; prototype their big* ideas.</h4>
-      <a href="" class="link-blue2"><h5>More About Me</h5></a>
-    </div>
-  </div>
-
-  <div class="section-work bg-white col-ink">
-    <div class="mid-title-wrap">
-      <div class="">
-        <h2>Recent Work</h2>
-        <h5>Giving life to digital products, new and old.</h5>
+  <!-- Menu Bar -->
+  @@include('./inc/components/menubar.html')
+  
+  <!-- Content -->
+  <div class="grid">
+    <div class="section-home-intro bg-ink col-1-1">
+      <div class="content-cent">
+        <h1>Designer /</br>Human Being.</h1>
+        <h4>Helping people refine, design &amp; prototype their big<span class="text-note">*<span class="note-hidden">and little</span></span> ideas.</h4>
+        <a href="" class="link-blue2"><h5>More About Me</h5></a>
       </div>
     </div>
   </div>
 
+  <!-- Projects -->
+  <div class="section-work bg-white color-ink">
+    <div class="grid">
+      <!-- title -->
+      <div class="mid-title-wrap">
+        <div class="">
+          <h2>Recent Work</h2>
+          <h5>Imagining &amp; re-imagining digital products.</h5>
+        </div>
+      </div>
+
+      <!-- main project 1 -->
+      <div id="home-proj-1" class="transition hidden">
+        @@include('./inc/components/project-item.html')
+      </div>
+  
+      <!--main project 2 -->
+      <div id="home-proj-2">
+        @@include('./inc/components/project-item.html')
+      </div>
+
+      <!-- hack 1 -->
+      <div id="home-proj-3">
+        @@include('./inc/components/project-item.html')
+      </div>
+      
+      <!--hack 2 -->
+      <div id="home-proj-4">
+        @@include('./inc/components/project-item.html')
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- Temp CV Section -->
+  <div class="section-sub-head bg-blue1 col-1-1">
+    <div class="col-golden">
+      <h2>Working 9-5</h2>
+      <h4><a href="/cv.html">View My CV</a></h4>
+    </div>
+  </div>
 
 
 
-  <!-- <div id="header">
-    <header-bar></header-bar>
-  </div> -->
-
-<!--   <div id="app">
-    <p>{{ message }}</p>
-  </div> -->
-
-
-
-  <!--<script src="js/vendor/jquery-2.1.1.min.js"></script>-->
   <script src="https://unpkg.com/vue"></script>
   <script src="js/main.js"></script>
 </body>

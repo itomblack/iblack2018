@@ -23,19 +23,34 @@ html, body {
 
 
 //===============================================================================
-// HOME STLYES
+// HOME
 //===============================================================================
 
 //header
 .header-wrap {
-  margin-top: $reg-pad;
-  position: absolute;
+  padding: $reg-pad 0;
+  position: fixed;
   width: 100%;
+  z-index: 999;
 }
 
+.logo-wrap {
+  background-color: black;
+  padding: 12px 24px 12px 16px;
+  display: inline-block;
+  border-radius: 0px 100px 100px 0;
+}
+
+.svg-white {
+  svg g { fill: white; }
+}
+
+.svg-black {
+  svg g { fill: $ink; }
+}
 
 //sections
-.section-text {
+.section-home-intro {
   height: calc( 110vh ); 
   display: flex;
   align-items: center;
@@ -45,29 +60,175 @@ html, body {
   max-width: 570px;
 }
 
+.section-heading {
+  height: calc( 60vh ); 
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+}
 
 .section-work {
-  height: 1000px;
+  width: 100%;
   position: relative;
+  padding-top: 300px;
+  padding-bottom: 200px;
+
+  @media screen and (max-width: $small) {
+    padding-top: 200px;
+  }
 }
+
+.section-sub-head {
+  height: calc( 80vh ); 
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.section {
+  padding-top: $xxvlrg-pad;
+  padding-bottom: $xxvlrg-pad;
+}
+
 
 .mid-title-wrap {
   height: 350px;
+  top: -175px;
+  left: 50%;
   border-left: 1px solid $blue1;
   position: absolute;
-  left: 50%;
-  top: -175px;
-  padding-left: $reg-pad;
+  padding: 0 $reg-pad;
   display: flex;
   align-items: flex-end;
   
   h2 { margin-bottom: $sml-pad;}
   h5 { margin-bottom: 0; }
+
+  @media screen and (max-width: $small) {
+    height: 260px;
+    top: -130px;
+    left: $reg-pad;
+  }
+}
+
+
+[class*='project-item-wrap'] {
+  cursor: pointer; 
+  margin-bottom: 72px;
+  text-decoration: none;
+  color: $ink;
+
+  transition: all $long ease;
+
+  h4 { margin-bottom: $sml-pad; }
+  h5 { margin-bottom: $lrg-pad; }
+
+  .proj-img-wrap {
+    background-color: $ink;
+    height: 800px;
+    overflow: hidden;
+  }
+
+  figure {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transition: all $med ease;
+  }
+  
+  @media screen and (max-width: $large) {
+    .proj-img-wrap { height: 600px; }
+  }
+
+  @media screen and (max-width: $medium) {
+    .proj-img-wrap { height: 400px; }
+  }
+
+  @media screen and (min-width: $small) {
+   &.top-offset {
+      position: relative;
+      top: 200px;
+    }
+  }
+  
+  &:hover {
+    h4 { color: $blue1; }
+    h5 { color: $blue2; }
+    figure { transform: scale(1.05); }
+  }
+}
+
+.project-item-wrap-sml .proj-img-wrap {
+  height: 400px;
+}
+
+.img-proj-hit { background: url(/img/global/proj-hitsource.jpg) no-repeat center center; }
+.img-proj-travel { background: url(/img/global/proj-travel.jpg) no-repeat center center; }
+
+
+.hidden {
+  opacity: 0;
+  transform: translateY( 48px );
+}
+
+.text-note {
+  color: $blue3;
+  position: relative;
+  cursor: pointer;
+
+  .note-hidden {
+    position: absolute;
+    width: 110px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 600;
+    background: $blue1;
+    color: $white;
+    padding: 8px 16px;
+    border-radius: 100px;
+    display: none;
+    position: absolute;
+    top: -36px;
+    left: -48px;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      display: block;
+      background-color: $blue1;
+      transform: rotate(45deg);
+      bottom: -5px;
+      left: calc(50% - 6px);
+
+    }
+  }
+
+  &:hover {
+    .note-hidden {
+      display: block;
+    }
+  }
+
 }
 
 
 
+//===============================================================================
+// CV
+//===============================================================================
 
+
+.work-exp-wrap {
+  h1, h2, h3, h4, h5 {
+    margin-bottom: 0;
+  }
+
+  h5 {
+    margin-top: $reg-pad;
+  }
+}
 
 
 

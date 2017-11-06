@@ -17,11 +17,16 @@ $sml-pad: 8px;
 $reg-pad: 16px;
 $med-pad: 24px;
 $lrg-pad: 32px;
+$vlrg-pad: 64px;
+$xvlrg-pad: 96px;
+$xxvlrg-pad: 128px;
+
+.marg-bot-6 { margin-bottom: $xvlrg-pad; }
 
 
 //animation
 $short: 0.3s;
-$mid: 0.6s;
+$med: 0.6s;
 $long: 0.9s;
 $vLong: 1.5s;
 
@@ -29,15 +34,21 @@ $vLong: 1.5s;
 //colour
 .bg-ink { background: $ink; }
 .bg-white { background: $white; }
-.bg-blue1 { background: $blue1; }
-.bg-blue2 { background: $blue2; }
+.bg-blue1 {
+  background: $blue1;
+   a {
+    color: $blue3;
+    &:hover { color: $white; }
+  }
+}
+.bg-blue2 { background: $blue2;}
 .bg-blue3 { background: $blue3; }
 
-.col-ink { color: $ink; }
-.col-white { color: $white; }
-.col-blue1 { color: $blue1; }
-.col-blue2 { color: $blue2; }
-.col-blue3 { color: $blue3; }
+.color-ink { color: $ink; }
+.color-white { color: $white; }
+.color-blue1 { color: $blue1; }
+.color-blue2 { color: $blue2; }
+.color-blue3 { color: $blue3; }
 
 
 

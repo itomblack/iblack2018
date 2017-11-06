@@ -18,16 +18,16 @@ body {
 
 h1, h2, h3, h4, h5, h6, p {
   line-height: 1.333em;
-  margin-bottom: 1.33rem;
+  margin-bottom: 1rem;
 
 }
 
-h1, h2, h3 {
+h1, h2 {
   font-family: 'Playfair Display', serif;
   letter-spacing: 2px;
 }
 
-h4, h5, h6, p {
+h3, h4, h5, h6, p, ul {
   font-family: 'Lato', sans-serif;
   letter-spacing: 1px;
 }
@@ -55,7 +55,7 @@ h5 {
 }
 
 .sub-p {
-  font-size: 1rem;
+  font-size: 0.752rem;
 }
 
 .link-blue2 {
@@ -69,8 +69,47 @@ h5 {
   }
 }
 
+ul {
+  margin-top: 0.5rem;
+  li {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+
+    &:before {
+      content: "•";
+      color: $blue2;
+      position: absolute;
+      left: -16px;
+      top: -1px;
+    }
+  }
+}
 
 
+//******* mobile font size *******//
+@media screen and (max-width: $medium) {
+  h1 {
+    font-size: 2.488rem;
+  }
+
+  h2 {
+    font-size: 2.074rem;
+  }
+
+  h3 {
+    font-size: 1.728rem;
+  }
+
+  h4 {
+    font-size: 1.44rem;
+  }
+
+  h5 {
+    font-size: 1.2rem;
+  }
+}
 
 
 
