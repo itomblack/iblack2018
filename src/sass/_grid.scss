@@ -11,6 +11,7 @@ $gutter: 16px;
   @include clearfix;
   margin: 0 auto;
   max-width: 1300px;
+  padding: 0 $gutter;
 }
 
 
@@ -36,6 +37,8 @@ $gutter: 16px;
 
 
 @media screen and ( max-width: $small ) {
+  .grid { padding: 0; }
+
   [class*='col-'] { 
     width: 100%; 
     // float: none;
@@ -49,4 +52,6 @@ $gutter: 16px;
   .mobile-col-1-2 { width: 50%; }
   .mobile-col-1-4 { width: 25%; }
   .mobile-col-1-8 { width: 12.5%; }
+
+  .no-pad-mob { padding: 0; }
 }

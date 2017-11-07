@@ -70,12 +70,12 @@ h5 {
 }
 
 ul {
-  margin-top: 0.5rem;
   li {
     font-size: 1rem;
     line-height: 1.5rem;
     position: relative;
     margin-bottom: 0.5rem;
+    margin-left: 1rem;
 
     &:before {
       content: "•";

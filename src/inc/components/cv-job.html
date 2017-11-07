@@ -1,0 +1,12 @@
+<div class="col-1-3 no-pad">
+  <h3 class="color-blue1"> {{ company }} </h3>
+  <p> {{ dates }} </p>
+</div>
+<div class="col-2-3 no-pad-mob">
+  <h5 class="color-blue1"> {{ role }} </h5>
+  <ul>
+    <li v-for="item in bullets">
+      {{ item.message }}
+    </li>
+  </ul>
+</div>

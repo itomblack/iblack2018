@@ -221,13 +221,19 @@ html, body {
 
 
 .work-exp-wrap {
-  h1, h2, h3, h4, h5 {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: $lrg-pad;
+
+  h1, h2, h3, h4 {
     margin-bottom: 0;
   }
 
-  h5 {
-    margin-top: $reg-pad;
+  h5 { margin-bottom: $sml-pad; }
+  @media screen and (min-width: $small) {
+    h5 { margin-top: $reg-pad; }
   }
+  
 }
 
 
