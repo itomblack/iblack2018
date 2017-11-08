@@ -21,7 +21,9 @@ $vlrg-pad: 64px;
 $xvlrg-pad: 96px;
 $xxvlrg-pad: 128px;
 
+.marg-bot-5 { margin-bottom: $vlrg-pad; }
 .marg-bot-6 { margin-bottom: $xvlrg-pad; }
+
 .marg-top-5 { margin-top: $vlrg-pad; }
 
 
@@ -35,15 +37,16 @@ $vLong: 1.5s;
 //colour
 .bg-ink { background: $ink; }
 .bg-white { background: $white; }
-.bg-blue1 {
-  background: $blue1;
+.bg-blue1 { background: $blue1; }
+.bg-blue2 { background: $blue2;}
+.bg-blue3 { background: $blue3; }
+
+.bg-ink, .bg-blue1 {
    a {
     color: $blue3;
     &:hover { color: $white; }
   }
 }
-.bg-blue2 { background: $blue2;}
-.bg-blue3 { background: $blue3; }
 
 .color-ink { color: $ink; }
 .color-white { color: $white; }

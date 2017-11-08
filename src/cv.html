@@ -5,79 +5,104 @@
   <title>CV - iBlack</title> 
 </head>
 <body>
+<div id="app">
+  <div v-cloak>
 
-  <!-- Menu Bar -->
-  @@include('./inc/components/menubar.html')
-  
-  <!-- Content -->
-  <div class="grid">
-    <div class="section-heading bg-ink col-1-1">
-      <div class="col-golden no-pad">
-        <h1>Curriculum Vitae.</h1>
-        <h4>Story of my life. Abridged.</h4>
+    <!-- Menu Bar -->
+    @@include('./inc/components/menubar.html')
+    
+    <!-- Content -->
+    <div class="grid">
+      <div class="section-heading bg-ink col-1-1">
+        <div class="col-golden no-pad">
+          <h1>Curriculum Vitae.</h1>
+          <h4>Story of my life. Abridged.</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- jobs & skills -->
+    <div class="section col-1-1 bg-white color-ink">
+      <div class="grid">
+        <h2 class="marg-bot-5">Work</h2>
+     
+        <!-- job 1 -->
+        <div id="cv-job-1" class="work-exp-wrap">
+          @@include('./inc/components/cv-job.html')
+        </div>
+
+        <!-- job 2 -->
+        <div id="cv-job-2" class="work-exp-wrap">
+          @@include('./inc/components/cv-job.html')
+        </div>
+
+        <!-- job 3 -->
+        <div id="cv-job-3" class="work-exp-wrap">
+          @@include('./inc/components/cv-job.html')
+        </div>
+
+        <!-- job 4 -->
+        <div id="cv-job-4" class="work-exp-wrap">
+          @@include('./inc/components/cv-job.html')
+        </div>
+        
+
+        <!-- Education -->
+        <h2 class="marg-bot-5 marg-top-5">Education</h2>
+        <div class="work-exp-wrap">
+          <!-- Uni -->
+          <div class="col-1-3 no-pad">
+            <h5 class="color-blue1"> Sheffield School Of Architecture </h5>
+            <p> Architecture BA(Hons) : Upper 2nd Class </p>
+          </div>
+          <!-- School -->
+          <div class="col-2-3 no-pad-mob">
+            <h5 class="color-blue1"> Eltham College </h5>
+            <ul>
+              <li >3 A grade A-levels</li>
+              <li >1 A grade AS-level</li>
+              <li >10 A* to A grade GCSEs</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <h2 class="marg-bot-5 marg-top-5">Competencies</h2>
+          
+        <div id="cv-skills" class="comp-wrap col-1-2 no-l-pad">
+           @@include('./inc/components/cv-comps.html')
+        </div>
+
+        <div id="cv-tools" class="comp-wrap col-1-2 no-l-pad">
+           @@include('./inc/components/cv-comps.html')
+        </div>
+      
+      </div> <!-- end grid -->
+    </div> <!-- End jobs & skills -->
+
+
+    <div class="section-sub-head bg-ink col-1-1">
+      <div class="col-golden">
+        <h2>Let's Connect.</h2>
+        <h4>
+          <a href="https://www.linkedin.com/in/ian-black-720a3942" target="_blank">LinkedIn</a>
+          <span>/</span>
+          <a href="https://medium.com/@itomblack88" target="_blank">Medium</a>
+          <span>/</span>
+          <a href="https://www.instagram.com/itomblack/" target="_blank">Instagram</a>
+          <span>/</span>
+          <a href="https://github.com/itomblack" target="_blank">Github</a>
+        </h4>
       </div>
     </div>
   </div>
 
-  <!-- Projects -->
-  <div class="section col-1-1 bg-white color-ink">
-    <div class="grid">
-      <h2 class="marg-bot-6">Work</h2>
-   
-      <!-- job 1 -->
-      <div id="cv-job-1" class="work-exp-wrap">
-        @@include('./inc/components/cv-job.html')
-      </div>
+  <div class="loader" v-if="!$data">
+      Loading..... (spinner)
+  </div>
+</div>
 
-      <!-- job 2 -->
-      <div id="cv-job-2" class="work-exp-wrap">
-        @@include('./inc/components/cv-job.html')
-      </div>
-
-      <!-- job 3 -->
-      <div id="cv-job-3" class="work-exp-wrap">
-        @@include('./inc/components/cv-job.html')
-      </div>
-
-      <!-- job 4 -->
-      <div id="cv-job-4" class="work-exp-wrap">
-        @@include('./inc/components/cv-job.html')
-      </div>
-      
-
-      <!-- Education -->
-      <h2 class="marg-bot-6 marg-top-5">Education</h2>
-      <div class="work-exp-wrap">
-        <!-- Uni -->
-        <div class="col-1-3 no-pad">
-          <h5 class="color-blue1"> Sheffield School Of Architecture </h5>
-          <p> Architecture BA(Hons) : Upper 2nd Class </p>
-        </div>
-        <!-- School -->
-        <div class="col-2-3 no-pad-mob">
-          <h5 class="color-blue1"> Eltham College </h5>
-          <ul>
-            <li >3 A grade A-levels</li>
-            <li >1 A grade AS-level</li>
-            <li >10 A* to A grade GCSEs</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Education -->
-      <h2 class="marg-bot-6 marg-top-5">Competencies</h2>
-
-
-
-
-
-    
-    </div>
-  </div> <!-- End projects -->
-
-
-
-  <script src="https://unpkg.com/vue"></script>
+  
   <script src="js/main.js"></script>
 </body>
 </html>

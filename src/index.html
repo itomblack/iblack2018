@@ -8,6 +8,8 @@
   
 </head>
 <body>
+<div id="app">
+<div v-cloak>
   
   <!-- Menu Bar -->
   @@include('./inc/components/menubar.html')
@@ -65,9 +67,15 @@
     </div>
   </div>
 
+</div>
+
+<div class="loader" v-if="!$data">
+    Loading..... (spinner)
+</div>
+
+</div>
 
 
-  <script src="https://unpkg.com/vue"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

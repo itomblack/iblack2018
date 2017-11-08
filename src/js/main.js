@@ -41,7 +41,7 @@
     data: {
       title: 'Whisky Map Hack',
       subTitle: 'Design, Development',
-       imgClass: '#',
+      imgClass: '#',
       imgSizeClass: 'project-item-wrap-sml top-offset',
       url: '#'
     }
@@ -58,9 +58,9 @@ var cvjob1 = new Vue({
     dates: 'May 2017 - Present',
     role: 'Senior Product Designer',
     bullets: [
-      { message: 'Product design for established businesses, & fresh startups.' },
+      { message: 'Product design for established businesses & fresh startups.' },
       { message: 'Organizing & facilitating design workshops for clients & minor celebrities.' },
-      { message: 'Collaborating with strategists & developers.' },
+      { message: 'Collaborating with strategists, copywriters & developers.' },
       { message: 'Developing the Invoke brand tone of voice.' },
       { message: 'Revamping design team recruitment processes.' }
 
@@ -107,7 +107,7 @@ var cvjob4 = new Vue({
     role: 'Designer',
     bullets: [
       { message: 'Creating international brands for this strategic design consultancy.' },
-      { message: 'Designing across print, digital & interiors for the retail & leisure industries.' },
+      { message: 'Designing for print, digital & interiors for the retail & leisure industries.' },
       { message: 'Collaborating with brand planners, clients and suppliers to deliver engaging brand experiences.' }
     ]
   }
@@ -115,10 +115,61 @@ var cvjob4 = new Vue({
 
 
 
+var cvSkills = new Vue({
+  el: '#cv-skills',
+  data: {
+    title: 'Skills',
+    color: 'bg-blue1',
+    bullets: [
+      { message: 'UX Design' },
+      { message: 'Interface Design' },
+      { message: 'Product Strategy' },
+      { message: 'Prototyping' },
+      { message: 'Design Workshop Facilitation' },
+      { message: 'User Research' },
+      { message: 'Graphic Design' },
+      { message: 'Branding' },
+      { message: 'Wireframing' },
+      { message: 'Front-end development' },
+      { message: '2D Animation' }
+    ]
+  }
+})
+
+var cvTools = new Vue({
+  el: '#cv-tools',
+  data: {
+    title: 'Tools',
+    color: 'bg-blue2',
+    bullets: [
+      { message: 'HTML' },
+      { message: 'CSS' },
+      { message: 'SCSS' },
+      { message: 'Javascript' },
+      { message: 'Gulp' },
+      { message: 'Sketch' },
+      { message: 'InVision' },
+      { message: 'Zeplin' },
+      { message: 'Illustrator' },
+      { message: 'Photoshop' },
+      { message: 'Lightroom' },
+      { message: 'InDesign' },
+      { message: 'After Effects' },
+      { message: 'Microsoft Office' },
+      { message: 'Google Apps' },
+      { message: 'Google Analytics' },
+      { message: 'Keynote' },
+    ]
+  }
+})
 
 
 
-
+setTimeout(function() {
+  new Vue({
+    el: '#app'
+  });
+}, 1000);
 
 
 
@@ -142,13 +193,14 @@ var cvjob4 = new Vue({
     function doThisStuffOnScroll() {
         didScroll = true;
     }
-    setInterval(function() {
-        if(didScroll) {
+    setInterval( function() {
+        if ( didScroll ) {
             didScroll = false;
             console.log('You scrolled');
             checkPosition();
+            menuShow();
         }
-    }, 100);
+    }, 50);
 
     //show elements when on screen
     var elems,
@@ -159,13 +211,13 @@ var cvjob4 = new Vue({
       addEventHandlers()
     }
     var addEventHandlers = function () {
-      // window.addEventListener('scroll', _checkPosition)
       window.addEventListener('resize', init)
     }
+    //if hidden items have moved onto screen, then show
     var checkPosition = function () {
       for (var i = 0; i < elems.length; i++) {
         var posFromTop = elems[i].getBoundingClientRect().top
-        if (posFromTop - windowHeight <= -150) {
+        if (posFromTop - windowHeight <= -100) {
           elems[i].className = elems[i].className.replace('hidden', 'fade-in-element')
         }
       }
@@ -178,6 +230,24 @@ var cvjob4 = new Vue({
 
 
 
+
+  // menu test !!!!!!!!!! //
+
+  var lastScrollTop = 0;
+
+  var menuShow = function () {  
+     var st = window.pageYOffset || document.documentElement.scrollTop;  
+     if (st > lastScrollTop){
+         document.getElementById("menu-bar").style.top = "-150px";
+     } else {
+        document.getElementById("menu-bar").style.top = "0";
+     }
+     lastScrollTop = st;
+  }
+
+
+
+// document.getElementById("body").classList.remove("no-show");
 
 
 

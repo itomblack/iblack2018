@@ -25,13 +25,24 @@ html, body {
 //===============================================================================
 // HOME
 //===============================================================================
+[v-cloak] { display: none; }
 
+.no-show { display: none; }
+.loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: red;
+
+}
 //header
 .header-wrap {
   padding: $reg-pad 0;
   position: fixed;
   width: 100%;
   z-index: 999;
+  transition: top $med ease;
+
 }
 
 .logo-wrap {
@@ -236,7 +247,15 @@ html, body {
   
 }
 
-
+.comp-wrap {
+  h5 { margin-bottom: $reg-pad; }
+  span {
+    padding: $sml-pad $med-pad;
+    border-radius: 50px;
+    margin: 6px 6px 6px 0;
+    display: inline-block;
+  }
+}
 
 
 
