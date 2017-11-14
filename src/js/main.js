@@ -1,6 +1,7 @@
 (function () { 'use strict';
 
-//********** Project Items *************** //
+// ********** Project Items *************** //
+// ********** ************* *************** //
 
   new Vue({
     el: '#home-proj-1',
@@ -21,7 +22,7 @@
       subTitle: 'Strategy, UX, Prototyping',
       imgClass: 'img-proj-travel',
       imgSizeClass: 'project-item-wrap-lrg top-offset',
-      url: '#'
+      url: '/travel-project.html'
     }
   });
 
@@ -30,9 +31,9 @@
     data: {
       title: 'Blues Harp Hack',
       subTitle: 'Design, Development',
-      imgClass: '#',
+      imgClass: 'img-proj-harp',
       imgSizeClass: 'project-item-wrap-sml',
-      url: '#'
+      url: 'http://itomblack.github.io/harp/'
     }
   });
 
@@ -41,16 +42,26 @@
     data: {
       title: 'Whisky Map Hack',
       subTitle: 'Design, Development',
-      imgClass: '#',
+      imgClass: 'img-proj-whisky',
       imgSizeClass: 'project-item-wrap-sml top-offset',
-      url: '#'
+      url: 'https://itomblack.github.io/whisky-map/'
     }
   });
 
 
 
 
-//********** CV *************** //
+// ********** CV *************** //
+// ********** ** *************** //
+
+var cvtitle = new Vue({
+  el: '#page-title-cv',
+  data: {
+    heading: 'Curriculum Vitae.',
+    subHeading: 'Story of my life - Abridged.'
+  }
+})
+
 var cvjob1 = new Vue({
   el: '#cv-job-1',
   data: {
@@ -59,11 +70,10 @@ var cvjob1 = new Vue({
     role: 'Senior Product Designer',
     bullets: [
       { message: 'Product design for established businesses & fresh startups.' },
-      { message: 'Organizing & facilitating design workshops for clients & minor celebrities.' },
+      { message: 'Design workshop planning & facilitation for minor celebrities.' },
+      { message: 'User research for the largest Credit Union in Canada.' },
       { message: 'Collaborating with strategists, copywriters & developers.' },
-      { message: 'Developing the Invoke brand tone of voice.' },
-      { message: 'Revamping design team recruitment processes.' }
-
+      { message: 'Developing the Invoke brand tone of voice.' }
     ]
   }
 })
@@ -78,7 +88,8 @@ var cvjob2 = new Vue({
       { message: 'Defining new business products with the Beyond Strategy team.' },
       { message: 'Developing agile, UX design processes within TravelSupermarket.' },
       { message: 'Leading UX workshops for the UK\'s 2nd largest Supermarket.' },
-      { message: 'Mentoring Junior Designers.' }
+      { message: 'Mentoring Junior Designers.' },
+      { message: 'Design team recruitment.' }
     ]
   }
 })
@@ -164,6 +175,25 @@ var cvTools = new Vue({
 })
 
 
+// ********** Case Studies *************** //
+// ********** ************ *************** //
+
+var traveltitle = new Vue({
+  el: '#page-title-travel',
+  data: {
+    heading: 'Travel Supermarket',
+    subHeading: 'Deal Comparison For Package Holidays.'
+  }
+})
+
+
+
+
+
+
+
+// ********** Page Loader *************** //
+// ********** ************ *************** //
 
 setTimeout(function() {
   new Vue({
@@ -182,9 +212,6 @@ setTimeout(function() {
 
 
 // ****** Vanilla JS Stuff ****** //
-  
-
-
 
   var animateHTML = function () {
     // only call scroll events every 100ms

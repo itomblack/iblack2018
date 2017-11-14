@@ -170,11 +170,13 @@ html, body {
 }
 
 .project-item-wrap-sml .proj-img-wrap {
-  height: 400px;
+  height: 450px;
 }
 
 .img-proj-hit { background: url(/img/global/proj-hitsource.jpg) no-repeat center center; }
 .img-proj-travel { background: url(/img/global/proj-travel.jpg) no-repeat center center; }
+.img-proj-harp { background: url(/img/global/proj-harp.jpg) no-repeat center center; }
+.img-proj-whisky { background: url(/img/global/proj-whisky.jpg) no-repeat center center; }
 
 
 .hidden {
@@ -254,8 +256,21 @@ html, body {
     border-radius: 50px;
     margin: 6px 6px 6px 0;
     display: inline-block;
+    font-weight: 600;
   }
 }
 
+//===============================================================================
+// Case Studies
+//===============================================================================
+
+.hero-travel { background: url(/img/cs/travel/header-img-travel.jpg) no-repeat center center; }
+
+.cs-hero {
+  height: 110vh;
+  width: 100%;
+  background-color: $white;
+  background-size: cover;
+}
 
 

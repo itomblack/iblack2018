@@ -62,11 +62,17 @@ h5 {
 .link-blue2 {
   color: $blue2;
   text-decoration: none;
-  h5, p, span { display: inline; border-bottom: 1px solid $blue2; }
+  h5, p, span {
+    color: $blue2;
+    display: inline; border-bottom: 1px solid $blue2;
+  }
 
   &:hover { 
     color: $blue3;
-    h5, p, span { display: inline; border-bottom: 1px solid $blue3; }
+    h5, p, span {
+      color: $blue3;
+      display: inline; border-bottom: 1px solid $blue3;
+    }
   }
 }
 

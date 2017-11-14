@@ -2,15 +2,19 @@
 <html>
 <head>
   @@include('./inc/head.html')
-  <title></title> <!-- ADD A TITLE! -->
+  <title></title> <!-- Add a Title -->
 </head>
 <body>
+<div id="app">
+  <div v-cloak>
 
-  <h1>Hello World</h1>
+    <!-- Menu Bar -->
+    @@include('./inc/components/menubar.html')
+    
+    <!-- Content -->
+ 
 
-
-
-  <script src="js/vendor/jquery-2.1.1.min.js"></script>
+  
   <script src="js/main.js"></script>
 </body>
 </html>
