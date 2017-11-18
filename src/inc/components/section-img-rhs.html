@@ -1,33 +1,35 @@
 <div class="" v-bind:class="bgCol">
 
-  <!-- Background RHS (if an image) -->
-  <div class="sect-rhs-wrap" v-if="(imageurl !== '')">
+  <!-- Background RHS -->
+  <div class="sect-rhs-wrap" v-if="(rhsBgCol !== '')">
     <div class="sect-rhs">
       <div class="sect-rhs-fill" v-bind:class="rhsBgCol"></div>
     </div>
   </div>
 
   <!-- Content -->
-  <div class="grid cs-intro-wrap flex-cent flex-stack-med">
-    
-    <template v-if="(imageurl !== '')">
+  <!-- If there's an image -->
+  <template v-if="(imageurl !== '')">
+    <div class="grid cs-intro-wrap flex-cent flex-stack-med">
       <div class="col-1-3 md-col-1">
         @@include('./triple-text.html')
       </div>
-    </template>
 
-    <template v-else>
+      <div class="col-2-3 md-col-1" v-if="(imageurl !== '')">
+        <div class="rhs-img">
+          <img v-bind:src="'/img/cs/' + imageurl" v-bind:class="imgshadow">
+        </div>
+      </div> 
+    </div>
+  </template>
+  
+  <!-- Else if no image -->
+  <template v-else>
+    <div class="grid cs-intro-wrap flex-cent">
       <div class="col-1-2 md-col-1">
         @@include('./triple-text.html')
       </div>
-    </template>
-
-    <div class="col-2-3 md-col-1" v-if="(imageurl !== '')">
-      <div class="rhs-img">
-        <img v-bind:src="'/img/cs/' + imageurl">
-      </div>
-    </div>    
-    
-  </div>
+    </div>
+  </template>
   
 </div>

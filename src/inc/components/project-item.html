@@ -1,7 +1,21 @@
-<a class="col-1-2 hidden" v-bind:class="imgSizeClass" v-bind:href="url" target="blank" v-cloak>
-  <h4 class="serif" v-cloak>{{ title }}</h4>
-  <h5 v-cloak>{{ subTitle }}</h5>
-  <div class="proj-img-wrap">
-    <figure v-bind:class="imgClass" v-cloak></figure>
-  </div>
-</a>
+<!-- If project -->
+<template v-if="(internalurl !== '')">
+  <a class="col-1-2 hidden" v-bind:class="imgSizeClass" v-bind:href="internalurl" v-cloak>
+    <h4 class="serif" v-cloak>{{ title }}</h4>
+    <h5 v-cloak>{{ subTitle }}</h5>
+    <div class="proj-img-wrap">
+      <figure v-bind:class="imgClass" v-cloak></figure>
+    </div>
+  </a>
+</template>
+
+<!-- If external-link -->
+<template v-if="(externalurl !== '')">
+  <a class="col-1-2 hidden" v-bind:class="imgSizeClass" v-bind:href="externalurl" target="blank" v-cloak>
+    <h4 class="serif" v-cloak>{{ title }}</h4>
+    <h5 v-cloak>{{ subTitle }}</h5>
+    <div class="proj-img-wrap">
+      <figure v-bind:class="imgClass" v-cloak></figure>
+    </div>
+  </a>
+</template>
