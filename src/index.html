@@ -5,75 +5,75 @@
   
   <title>iBlack</title>
   
-  
 </head>
 <body>
-<div id="app">
-<div v-cloak>
-  
-  <!-- Menu Bar -->
-  @@include('./inc/components/menubar.html')
-  
-  <!-- Content -->
-  <div class="grid">
-    <div class="section-home-intro bg-ink col-1-1">
-      <div class="content-cent">
-        <h1>Designer /</br>Human Being.</h1>
-        <h4>Helping people refine, design &amp; prototype their big<span class="text-note">*<span class="note-hidden">and little</span></span> ideas.</h4>
-        <a href="" class="link-blue2"><h5>More About Me</h5></a>
+
+<!-- Loader -->
+@@include('./inc/components/loader.html')
+
+<div id="app" class="fade-in">
+  <div v-cloak>
+    
+    <!-- Menu Bar -->
+    @@include('./inc/components/menubar.html')
+    
+    <!-- Content -->
+    <div class="grid">
+      <div class="section-home-intro bg-ink col-1-1">
+        <div class="content-cent">
+          <h1>Designer /</br>Human Being.</h1>
+          <h4>Helping people refine, design &amp; prototype their big<span class="text-note">*<span class="note-hidden">or little</span></span> ideas.</h4>
+          <a href="/cv.html" class="link-blue2"><h5>More About Me</h5></a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Projects -->
-  <div class="section-work bg-white color-ink">
-    <div class="grid">
-      <!-- title -->
+    <!-- Projects -->
+
+    <!-- title -->
+    <div class="mid-title-section">
       <div class="mid-title-wrap">
         <div class="">
           <h2>Recent Work</h2>
           <h5>Imagining &amp; re-imagining digital products.</h5>
         </div>
       </div>
+    </div>
 
-      <!-- main project 1 -->
-      <div id="home-proj-1" class="transition hidden">
-        @@include('./inc/components/project-item.html')
-      </div>
-  
-      <!--main project 2 -->
-      <div id="home-proj-2">
-        @@include('./inc/components/project-item.html')
-      </div>
 
-      <!-- hack 1 -->
-      <div id="home-proj-3">
-        @@include('./inc/components/project-item.html')
-      </div>
-      
-      <!--hack 2 -->
-      <div id="home-proj-4">
-        @@include('./inc/components/project-item.html')
+    <div id="home-projects" class="section-work bg-white color-ink">
+      <div class="grid">
+
+        <!-- main project 1 -->
+        <div id="home-proj-1">
+          @@include('./inc/components/project-item.html')
+        </div>
+    
+        <!--main project 2 -->
+        <div id="home-proj-2">
+          @@include('./inc/components/project-item.html')
+        </div>
+
+        <!-- hack 1 -->
+        <div id="home-proj-3">
+          @@include('./inc/components/project-item.html')
+        </div>
+        
+        <!--hack 2 -->
+        <div id="home-proj-4">
+          @@include('./inc/components/project-item.html')
+        </div>
       </div>
     </div>
-  </div>
 
-  
-  <!-- Temp CV Section -->
-  <div class="section-sub-head bg-blue1 col-1-1">
-    <div class="col-golden">
-      <h2>Working 9-5</h2>
-      <h4><a href="/cv.html">View My CV</a></h4>
+    
+    <!-- CV Link -->
+    <div id="cv-link">
+      @@include('./inc/components/duo-title-link.html')
     </div>
+
   </div>
-
-</div>
-
-<div class="loader" v-if="!$data">
-    Loading..... (spinner)
-</div>
-
-</div>
+  
 
 
   <script src="js/main.js"></script>
