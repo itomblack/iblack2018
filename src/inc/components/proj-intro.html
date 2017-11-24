@@ -21,7 +21,13 @@
 
     <div>
       <p>Site: </p>
-      <span><a v-bind:href="url" target="_blank"> {{ sitetitle }} </a></span>
+
+      <template v-if="(url !== '')">
+        <span><a v-bind:href="url" target="_blank"> {{ sitetitle }} </a></span>
+      </template>
+      <template v-else>
+        <span><p> {{ sitetitle }} </p></span>
+      </template>
     </div>
    
   </div>

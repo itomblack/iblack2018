@@ -1,16 +1,20 @@
-<div class="bg-white">
+<div class="bg-white" v-cloak>
   <div id="" class="product-shots-wrap grid">
-    <!-- Desktop Shot -->
-    <div class="col-1-1">
-      <img v-bind:src="'/img/cs/' + deskurl1" alt="Product shot - desktop">
+
+    <!-- desktop-images -->
+    <div v-for="item in largeimages" class="col-1-1" v-cloak>
+      <img v-bind:src="'/img/cs/' + item.deskurl1" alt="Product shot - desktop">
     </div>
+
     <!-- Phone 1 -->
-    <div class="col-1-2">
-      <img v-bind:src="'/img/cs/' + moburl1" alt="Product shot - Mobile" class="">
-    </div>
-    <!-- Phone 2 -->
-    <div class="col-1-2">
-      <img v-bind:src="'/img/cs/' + moburl2" alt="Product shot - Mobile">
+    <div v-if="(moburl1 !== '')">
+      <div class="col-1-2" v-cloak>
+        <img v-bind:src="'/img/cs/' + moburl1" alt="Product shot - Mobile" class="">
+      </div>
+      <!-- Phone 2 -->
+      <div class="col-1-2" v-cloak>
+        <img v-bind:src="'/img/cs/' + moburl2" alt="Product shot - Mobile">
+      </div>
     </div>
   </div>
 </div>
