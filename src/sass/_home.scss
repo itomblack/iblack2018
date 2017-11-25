@@ -23,12 +23,90 @@ html, body {
 
 
 //===============================================================================
+// MENU
+//===============================================================================
+
+.header-wrap {
+  padding: $reg-pad 0;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  transition: top $med ease;
+}
+
+.menu-btn {
+  position: absolute;
+  right: 24px;
+  top: 16px;
+  border-bottom: 1px solid;
+  cursor: pointer;
+  z-index: 999;
+
+  &:hover { color: $blue3; }
+}
+
+.svg-white {
+  svg g { fill: white; }
+}
+
+.svg-black {
+  svg g { fill: $ink; }
+}
+
+.menu-wrap {
+  width: 100%;
+  height: calc(100vh + 100px);
+  background: $ink;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  z-index: 950;
+  text-align: center;
+  transition: all 1.5s ease;
+
+  a {
+    text-decoration: none;
+    display: block;
+    line-height: 1.75rem;
+    color: $blue1;
+   }
+
+  h3 {
+    color: $white;
+    margin-top: $reg-pad;
+  }
+
+  h5 {
+    color: $blue1;
+    margin-top: 12px;
+  }
+
+  h3, h5, a {
+     &:hover{ color: $blue3; }
+  }
+}
+
+.slide-fade-enter-active {
+  transition: all .5s ease;
+}
+.slide-fade-leave-active {
+  transition: all .5s ease;
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateY(-64px);
+  opacity: 0;
+}
+
+
+
+//===============================================================================
 // HOME
 //===============================================================================
 [v-cloak] { display: none; }
 
 .fade-in {
-  animation: fade-in 3s ease;
+  animation: fade-in 2s ease;
 }
 
 @keyframes fade-in {
@@ -48,32 +126,9 @@ div {
   align-items: center;
 }
 
+.flex-horiz-cent { justify-content: center; }
+
 .no-show { display: none; }
-
-//header
-.header-wrap {
-  padding: $reg-pad 0;
-  position: fixed;
-  width: 100%;
-  z-index: 999;
-  transition: top $med ease;
-
-}
-
-.logo-wrap {
-  background-color: black;
-  padding: 12px 24px 12px 16px;
-  display: inline-block;
-  border-radius: 0px 100px 100px 0;
-}
-
-.svg-white {
-  svg g { fill: white; }
-}
-
-.svg-black {
-  svg g { fill: $ink; }
-}
 
 //sections
 .section-home-intro {
@@ -157,7 +212,13 @@ div {
 
   transition: all $long ease;
 
-  h4 { margin-bottom: $sml-pad; }
+  h4 { 
+    margin-bottom: $sml-pad;
+    border-bottom: 1px solid;
+    color: $ink;
+    display: inline-block;
+  }
+
   h5 { margin-bottom: $lrg-pad; }
 
   .proj-img-wrap {
@@ -199,10 +260,10 @@ div {
   height: 450px;
 }
 
-.img-proj-hit { background: url(/img/global/proj-hitsource.jpg) no-repeat center center; }
-.img-proj-travel { background: url(/img/global/proj-travel.jpg) no-repeat center center; }
-.img-proj-harp { background: url(/img/global/proj-harp.jpg) no-repeat center center; }
-.img-proj-whisky { background: url(/img/global/proj-whisky.jpg) no-repeat center center; }
+.img-proj-hit { background: url(../img/global/proj-hitsource.jpg) no-repeat center center; }
+.img-proj-travel { background: url(../img/global/proj-travel.jpg) no-repeat center center; }
+.img-proj-harp { background: url(../img/global/proj-harp.jpg) no-repeat center center; }
+.img-proj-whisky { background: url(../img/global/proj-whisky.jpg) no-repeat center center; }
 
 
 .hidden {
@@ -217,19 +278,19 @@ div {
 
   .note-hidden {
     position: absolute;
-    width: 110px;
+    width: 90px;
     text-align: center;
     font-size: 1rem;
     line-height: 1rem;
     font-weight: 600;
     background: $blue1;
     color: $white;
-    padding: 8px 16px;
+    padding: $sml-pad $sml-pad;
     border-radius: 100px;
     display: none;
     position: absolute;
     top: -36px;
-    left: -48px;
+    left: -38px;
     &::after {
       content: "";
       position: absolute;
@@ -295,8 +356,8 @@ div {
 // Case Studies
 //===============================================================================
 
-.hero-travel { background: url(/img/cs/travel/header-img-travel.jpg) no-repeat center center; }
-.hero-hits { background: url(/img/cs/hitsource/header-img-hit.jpg) no-repeat center center; }
+.hero-travel { background: url(../img/cs/travel/header-img-travel.jpg) no-repeat center center; }
+.hero-hits { background: url(../img/cs/hitsource/header-img-hit.jpg) no-repeat center center; }
 
 .cs-hero {
   height: 110vh;

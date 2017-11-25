@@ -1,6 +1,7 @@
 (function () { 'use strict';
 
 
+
 // ********** Project Items *************** //
 // ********** ************* *************** //
 
@@ -11,7 +12,7 @@
       subTitle: 'Brand, UX, UI',
       imgClass: 'img-proj-hit',
       imgSizeClass: 'project-item-wrap-lrg',
-      internalurl: '/hitsource-project.html',
+      internalurl: 'hitsource-project.html',
       externalurl: ''
     }
   });
@@ -24,7 +25,7 @@
       subTitle: 'Strategy, UX, Prototyping',
       imgClass: 'img-proj-travel',
       imgSizeClass: 'project-item-wrap-lrg top-offset',
-      internalurl: '/travel-project.html',
+      internalurl: 'travel-project.html',
       externalurl: ''
     }
   });
@@ -58,7 +59,7 @@
     data: {
       title: 'Working 9-5',
       linktitle: 'View My CV',
-      linkurl: '/cv.html'
+      linkurl: 'cv.html'
     }
   });
 
@@ -353,7 +354,7 @@ var homeLink = new Vue({
   data: {
     title: 'What Next?',
     linktitle: 'Return To The Homepage',
-    linkurl: '/#'
+    linkurl: 'index.html'
   }
 });
 
@@ -510,15 +511,15 @@ var hitVisuals = new Vue({
 // ********** Page Loader *************** //
 // ********** ************ *************** //
 
-new Vue({
-  el: '#app'
-});
 
-// setTimeout(function() {
-//   new Vue({
-//     el: '#app'
-//   });
-// }, 1000);
+setTimeout(function() {
+  new Vue({
+    el: '#app',
+    data: {
+      menuseen: false
+    }
+  });
+}, 500);
 
 // remove loader after page load
 
@@ -595,8 +596,11 @@ setTimeout(function() {
 
   var menuShow = function () {  
      var st = window.pageYOffset || document.documentElement.scrollTop;  
-     if (st > lastScrollTop){
-         document.getElementById("menu-bar").style.top = "-150px";
+     if (st > lastScrollTop) {
+        //if menu isnt visible
+        if (!document.getElementById("menu-content")) {
+            document.getElementById("menu-bar").style.top = "-150px";
+          }
      } else {
         document.getElementById("menu-bar").style.top = "0";
      }
