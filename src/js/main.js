@@ -132,7 +132,7 @@ var cvjob4 = new Vue({
   el: '#cv-job-4',
   data: {
     company: 'Harrison : Fraser',
-    dates: 'Jan 2015 - Jul 2016',
+    dates: 'Jan 2012 - Jul 2014',
     role: 'Designer',
     bullets: [
       { message: 'Creating international brands for this strategic design consultancy.' },
