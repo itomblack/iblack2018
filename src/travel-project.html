@@ -5,7 +5,11 @@
   <title>Travel Supermarket - iBlack</title> 
 </head>
 <body>
-<div id="app">
+
+<!-- Loader -->
+@@include('./inc/components/loader.html')
+
+<div id="app" class="fade-in">
   <div v-cloak>
 
     <!-- Menu Bar -->
@@ -21,11 +25,74 @@
     <figure class="cs-hero hero-travel"></figure>
 
     <!-- Project Intro -->
+    <div id="intro-travel">
+      @@include('./inc/components/proj-intro.html')
+    </div>
 
+    <!-- Section -->
+    <div id="sect-travel-constraints">
+      @@include('./inc/components/section-img-rhs.html')
+    </div>
+
+    <!-- Section -->
+    <div id="sect-travel-interview">
+      @@include('./inc/components/section-img-rhs.html')
+    </div>
+
+    <!-- Section -->
+    <div id="sect-travel-data">
+      @@include('./inc/components/section-img-rhs.html')
+    </div>
+
+    <!-- Section -->
+    <div id="sect-travel-strat">
+      @@include('./inc/components/section-img-rhs.html')
+    </div>
+
+    <!-- Section scroll -->
+    <div id="sect-travel-content">
+      @@include('./inc/components/section-img-rhs-scroll.html')
+    </div>
+
+    <!-- Section lhs-img -->
+    <div id="sect-travel-code">
+      @@include('./inc/components/section-img-lhs.html')
+    </div>
+
+    <!-- Section graph -->
+    <div id="sect-travel-track">
+      @@include('./inc/components/section-img-rhs.html')
+    </div>
+    
+    <!-- Section lhs-img-2 -->
+    <div id="sect-travel-iterate">
+      @@include('./inc/components/section-img-lhs.html')
+    </div>
+
+    <!-- Section final -->
+    <div id="sect-travel-end">
+      @@include('./inc/components/section-img-rhs.html')
+    </div>
+    
+    <!-- Project Visuals -->
+    <div id="sect-travel-visuals">
+      @@include('./inc/components/desk-mob-mob.html')
+    </div>
+
+    <!-- Return Home -->
+    <div id="home-link">
+      @@include('./inc/components/duo-title-link.html')
+    </div>
+
+    <!-- CV Link Component -->
+    @@include('./inc/components/connect-links.html')
+    
+
+   </div>
 
  
-
-  
+</div>
+ 
   <script src="js/main.js"></script>
 </body>
 </html>

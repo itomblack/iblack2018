@@ -5,7 +5,11 @@
   <title>CV - iBlack</title> 
 </head>
 <body>
-<div id="app">
+
+<!-- Loader -->
+@@include('./inc/components/loader.html')
+  
+<div id="app" class="fade-in">
   <div v-cloak>
 
     <!-- Menu Bar -->
@@ -76,26 +80,17 @@
       </div> <!-- end grid -->
     </div> <!-- End jobs & skills -->
 
+     <!-- Connect Link Component -->
+    @@include('./inc/components/connect-links.html')
 
-    <div class="section-sub-head bg-ink col-1-1">
-      <div class="col-golden">
-        <h2>Let's Connect.</h2>
-        <h4>
-          <a href="https://www.linkedin.com/in/ian-black-720a3942" target="_blank">LinkedIn</a>
-          <span>/</span>
-          <a href="https://medium.com/@itomblack88" target="_blank">Medium</a>
-          <span>/</span>
-          <a href="https://www.instagram.com/itomblack/" target="_blank">Instagram</a>
-          <span>/</span>
-          <a href="https://github.com/itomblack" target="_blank">Github</a>
-        </h4>
-      </div>
+    <!-- Return Home -->
+    <div id="home-link">
+      @@include('./inc/components/duo-title-link.html')
     </div>
-  </div>
 
-  <div class="loader" v-if="!$data">
-      Loading..... (spinner)
-  </div>
+   
+  </div> <!-- v-cloak end -->
+  
 </div>
 
   

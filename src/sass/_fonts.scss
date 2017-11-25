@@ -27,15 +27,16 @@ h1, h2 {
   letter-spacing: 2px;
 }
 
-h3, h4, h5, h6, p, ul {
+h3, h4, h5, h6, p, ul, a {
   font-family: 'Lato', sans-serif;
   letter-spacing: 1px;
+  transition: all $short ease;
 }
 
-
+// 1.333 rem scale
 
 h1 {
-  font-size: 3.157rem;
+  font-size: 4.209rem;
 }
 
 h2 {
@@ -54,22 +55,27 @@ h5 {
   font-size: 1.333rem;
 }
 
+p {
+  font-weight: 600;
+  line-height: 1.5;
+}
+
 .sub-p {
   font-size: 0.8rem;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .link-blue2 {
   color: $blue2;
   text-decoration: none;
-  h5, p, span {
+  h5, p, span, a {
     color: $blue2;
     display: inline; border-bottom: 1px solid $blue2;
   }
 
   &:hover { 
     color: $blue3;
-    h5, p, span {
+    h5, p, span, a {
       color: $blue3;
       display: inline; border-bottom: 1px solid $blue3;
     }
@@ -97,6 +103,10 @@ ul {
 
 //******* mobile font size *******//
 @media screen and (max-width: $medium) {
+  h1, h2, h3, h4, h5 {
+    margin-bottom: .6rem;
+  }
+
   h1 {
     font-size: 2.488rem;
   }

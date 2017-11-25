@@ -36,9 +36,23 @@ $vLong: 1.5s;
 
 //colour
 .bg-ink { background: $ink; }
-.bg-white { background: $white; }
-.bg-blue1 { background: $blue1; }
-.bg-blue2 { background: $blue2;}
+.bg-white { 
+  background: $white;
+  h2, p { color: $ink; }
+  h4 { color: $blue2;}
+  &::after { background: $white; }
+}
+.bg-blue1 { 
+  background: $blue1;
+  h4 { color: $blue3;}
+  &::after { background: $blue1; }
+}
+.bg-blue2 {
+  background: $blue2;
+  h4 { color: $blue3;}
+  &::after { background: $blue2; }
+}
+
 .bg-blue3 { background: $blue3; }
 
 .bg-ink, .bg-blue1 {
@@ -54,7 +68,7 @@ $vLong: 1.5s;
 .color-blue2 { color: $blue2; }
 .color-blue3 { color: $blue3; }
 
-
+.boxshadow-1 { box-shadow: 0 2px 6px 0 rgba(0,0,0,.33); }
 
 
 

@@ -1,5 +1,6 @@
 (function () { 'use strict';
 
+
 // ********** Project Items *************** //
 // ********** ************* *************** //
 
@@ -10,7 +11,8 @@
       subTitle: 'Brand, UX, UI',
       imgClass: 'img-proj-hit',
       imgSizeClass: 'project-item-wrap-lrg',
-      url: '#'
+      internalurl: '/hitsource-project.html',
+      externalurl: ''
     }
   });
 
@@ -22,7 +24,8 @@
       subTitle: 'Strategy, UX, Prototyping',
       imgClass: 'img-proj-travel',
       imgSizeClass: 'project-item-wrap-lrg top-offset',
-      url: '/travel-project.html'
+      internalurl: '/travel-project.html',
+      externalurl: ''
     }
   });
 
@@ -33,7 +36,8 @@
       subTitle: 'Design, Development',
       imgClass: 'img-proj-harp',
       imgSizeClass: 'project-item-wrap-sml',
-      url: 'http://itomblack.github.io/harp/'
+      internalurl: '',
+      externalurl: 'http://itomblack.github.io/harp/'
     }
   });
 
@@ -44,9 +48,22 @@
       subTitle: 'Design, Development',
       imgClass: 'img-proj-whisky',
       imgSizeClass: 'project-item-wrap-sml top-offset',
-      url: 'https://itomblack.github.io/whisky-map/'
+      internalurl: '',
+      externalurl: 'https://itomblack.github.io/whisky-map/'
     }
   });
+
+  new Vue({
+    el: '#cv-link',
+    data: {
+      title: 'Working 9-5',
+      linktitle: 'View My CV',
+      linkurl: '/cv.html'
+    }
+  });
+
+
+
 
 
 
@@ -71,7 +88,7 @@ var cvjob1 = new Vue({
     bullets: [
       { message: 'Product design for established businesses & fresh startups.' },
       { message: 'Design workshop planning & facilitation for minor celebrities.' },
-      { message: 'User research for the largest Credit Union in Canada.' },
+      { message: 'User research & product definition for the largest Credit Union in Canada.' },
       { message: 'Collaborating with strategists, copywriters & developers.' },
       { message: 'Developing the Invoke brand tone of voice.' }
     ]
@@ -113,7 +130,7 @@ var cvjob3 = new Vue({
 var cvjob4 = new Vue({
   el: '#cv-job-4',
   data: {
-    company: 'Harrison:Fraser',
+    company: 'Harrison : Fraser',
     dates: 'Jan 2015 - Jul 2016',
     role: 'Designer',
     bullets: [
@@ -150,7 +167,7 @@ var cvSkills = new Vue({
 var cvTools = new Vue({
   el: '#cv-tools',
   data: {
-    title: 'Tools',
+    title: 'Digital Toolkit',
     color: 'bg-blue2',
     bullets: [
       { message: 'HTML' },
@@ -178,14 +195,312 @@ var cvTools = new Vue({
 // ********** Case Studies *************** //
 // ********** ************ *************** //
 
-var traveltitle = new Vue({
+/* Travel Supermarket */
+
+var travelTitle = new Vue({
   el: '#page-title-travel',
   data: {
     heading: 'Travel Supermarket',
-    subHeading: 'Deal Comparison For Package Holidays.'
+    subheading: 'Deal Comparison For Package Holidays.'
   }
 })
 
+var travelIntro = new Vue({
+  el: '#intro-travel',
+  data: {
+    heading: 'Delivering A Better Experience',
+    subheading: 'This price comparison site for package holidays had a successful history but a rapidly declining audience. Our team committed to fixing it.',
+    roles: [
+      { message: 'Strategy' },
+      { message: 'UX' },
+      { message: 'Design' },
+      { message: 'Prototyping' },
+    ],
+    agency: 'Beyond',
+    sitetitle: 'TravelSupermarket.com',
+    url: 'https://www.travelsupermarket.com'
+  }
+})
+
+var travelConstraint = new Vue({
+  el: '#sect-travel-constraints',
+  data: {
+    bgCol: 'bg-blue1',
+    rhsBgCol: 'bg-white',
+    heading: 'Embracing Constraints',
+    subheading: 'The Discovery Phase',
+    para: 'We had three months to get the TSM team on board, and deliver a measurable change to their business.',
+    imageurl: 'travel/travel-img-0.jpg',
+    imgshadow: 'boxshadow-1'
+  }
+})
+
+var travelInterview = new Vue({
+  el: '#sect-travel-interview',
+  data: {
+    bgCol: 'bg-blue2',
+    rhsBgCol: '',
+    heading: 'Shhh. Listen...',
+    subheading: 'Stakeholder & Team Interviews',
+    para: 'We spent the first week listening to STLs, Data Scientists, BA\'s & Designers across the country. This highlighted where our team could add the most value.',
+    imageurl: '',
+    imgshadow: ''
+  }
+})
+
+var travelData = new Vue({
+  el: '#sect-travel-data',
+  data: {
+    bgCol: 'bg-white',
+    rhsBgCol: 'bg-blue1',
+    heading: 'Mine The Data',
+    subheading: 'Quantitative Customer Analysis',
+    para: 'Using collected reports and analytics, I built up a foundational portrait of the TSM site visitors. Something to build upon at least.',
+    imageurl: 'travel/travel-img-1.jpg',
+    imgshadow: 'boxshadow-1'
+  }
+})
+
+var travelStrat = new Vue({
+  el: '#sect-travel-strat',
+  data: {
+    bgCol: 'bg-blue2',
+    rhsBgCol: 'bg-blue2',
+    heading: 'Starting With Strategy',
+    subheading: 'Planning The Product Roadmap',
+    para: 'With our understanding of the new business strategy, we highlighted search results as the first design challenge. We broke this down further into testable product changes.',
+    imageurl: 'travel/travel-img-phone-1.png',
+    imgshadow: ''
+  }
+})
+
+var travelContent = new Vue({
+  el: '#sect-travel-content',
+  data: {
+    bgCol: 'bg-blue1',
+    heading: 'The King Is Here',
+    subheading: 'A Content-First Approach',
+    para: 'A good design is nothing without the right content. I redesigned the results card into sections. First: Intrigue. Second: Inform. Third: Recommend.',
+    imageurl: 'travel/travel-img-scroll-1.jpg',
+  }
+})
+
+
+var travelCode = new Vue({
+  el: '#sect-travel-code',
+  data: {
+    bgCol: 'bg-white',
+    heading: '<h1>Functional Design</h1>',
+    subheading: 'Live Prototyping In The Browser',
+    para: 'For true responsive testing I built a prototype results card using HTML & SCSS. To incorporate real data, I used Handlebars.js.',
+    imageurl: 'travel/travel-img-handlebar-1.png',
+    imgshadow: ''
+  }
+})
+
+var travelTrack = new Vue({
+  el: '#sect-travel-track',
+  data: {
+    bgCol: 'bg-blue2',
+    rhsBgCol: 'bg-blue2',
+    heading: 'Track The Data',
+    subheading: 'Planning The Product Roadmap',
+    para: 'It was important to make sure we met or exceeded our KPIs. New designs were tested & tracked across a segment of users before a full launch.',
+    imageurl: 'travel/travel-img-graph-1.png',
+    imgshadow: ''
+  }
+})
+
+var travelIterate = new Vue({
+  el: '#sect-travel-iterate',
+  data: {
+    bgCol: 'bg-white',
+    heading: 'Iterate, Iterate, Iterate',
+    subheading: 'Because One Is Never Enough',
+    para: 'Redesign No.1 was a success, but we wanted even better results. My second design tested a new approach, improving results further.',
+    imageurl: 'travel/tsm-card-animation-test-2.gif',
+    imgshadow: 'boxshadow-1'
+  }
+})
+
+var travelEnd = new Vue({
+  el: '#sect-travel-end',
+  data: {
+    bgCol: 'bg-blue1',
+    rhsBgCol: '',
+    heading: 'End On A High',
+    subheading: 'Laying Foundations For Future Success',
+    para: 'As our process moved forward, we continued to improve the team\'s communication & collaboration, from faster feedback loops to design team check-ins, and improved product demos. However, the mountains of Vancouver were calling my name and we had to part ways.',
+    imageurl: '',
+    imgshadow: ''
+  }
+})
+
+var travelVisuals = new Vue({
+  el: '#sect-travel-visuals',
+  data: {
+    largeimages: [
+      { deskurl1: 'travel/travel-img-desktop-1.jpg', }
+    ],
+    moburl1: 'travel/travel-img-phone-2.jpg',
+    moburl2: 'travel/travel-img-phone-3.jpg'
+  }
+})
+
+
+var homeLink = new Vue({
+  el: '#home-link',
+  data: {
+    title: 'What Next?',
+    linktitle: 'Return To The Homepage',
+    linkurl: '/#'
+  }
+});
+
+
+
+
+
+
+/* HitSource */
+
+var hitTitle = new Vue({
+  el: '#page-title-hits',
+  data: {
+    heading: 'HitSource',
+    subheading: 'The Music Maker\'s Marketplace.'
+  }
+})
+
+var hitIntro = new Vue({
+  el: '#intro-hits',
+  data: {
+    heading: 'The Exclusive Source For Beats',
+    subheading: 'Our ex-rapper client dreamt of building an invite-only marketplace for buying & selling beats. It was my job to bring it to life.',
+    roles: [
+      { message: 'Brand' },
+      { message: 'UX' },
+      { message: 'Design' }
+    ],
+    agency: 'Invoke',
+    sitetitle: 'Coming early 2018',
+    url: ''
+  }
+})
+
+
+var hitTalk = new Vue({
+  el: '#sect-hit-talk',
+  data: {
+    bgCol: 'bg-blue1',
+    rhsBgCol: 'bg-blue2',
+    heading: 'Time To Talk',
+    subheading: 'Stakeholder & Industry Research',
+    para: 'I partnered with the strategy team to understand the client\'s business. While strategist poured over forums, I ran guerilla research of my own with industry professionals to better understand the landscape. This confirmed our assumptions that hip-hop producers would be a key target audience.',
+    imageurl: 'hitsource/hit-img-1.jpg',
+    imgshadow: 'boxshadow-1'
+  }
+})
+
+var hitWorkshop = new Vue({
+  el: '#sect-hit-workshop',
+  data: {
+    bgCol: 'bg-white',
+    heading: 'Think First',
+    subheading: 'The Discovery Phase',
+    para: 'To define an MVP and flesh out the core architecture, I ran a design sprint, including 2 days of workshops. This combined Object Oriented UX activities, event-flows and brand discussions.',
+    imageurl: 'hitsource/hit-img-2.jpg',
+    imgshadow: ''
+  }
+})
+
+var hitMarket = new Vue({
+  el: '#sect-hit-market',
+  data: {
+    bgCol: 'bg-blue1',
+    rhsBgCol: '',
+    heading: 'Hit The Spot',
+    subheading: 'A Unique Market Position',
+    para: 'The strategy was to market high end, quality beats from vetted producers, with exclusive rights to the music, allowing for higher price points than the average beats marketplace.',
+    imageurl: 'hitsource/hit-img-4-1.png',
+    imgshadow: ''
+  }
+})
+
+var hitBrand = new Vue({
+  el: '#sect-hit-brand',
+  data: {
+    bgCol: 'bg-white',
+    heading: 'A Fresh Start',
+    subheading: 'Logo. Colour. Typography.',
+    para: 'Taking some cues from the client, and influences from Trap music culture, I developed a brand look & feel for the new product. This meant colours, typography & key UI elements.',
+    imageurl: 'hitsource/hit-img-3.jpg',
+    imgshadow: 'boxshadow-1'
+  }
+})
+
+var hitAgile = new Vue({
+  el: '#sect-hit-agile',
+  data: {
+    bgCol: 'bg-blue1',
+    heading: 'Agile In Action',
+    subheading: 'Design & Development Working Together',
+    para: 'Defining UI guidelines up-front meant we could design and build in each sprint. Design was always one step ahead. Every 2 weeks, new wireframes were reviewed with the client, before going into production.',
+    imageurl: 'hitsource/hit-img-scroll-1.jpg',
+  }
+})
+
+var hitConvo = new Vue({
+  el: '#sect-hit-convo',
+  data: {
+    bgCol: 'bg-blue2',
+    rhsBgCol: '',
+    heading: 'We Need To Talk',
+    subheading: 'A conversational transactional approach',
+    para: 'Offline, conversation is key to negotiating the sale of a beat. I designed a convo-transactional interface that let the discussion continue online.',
+    imageurl: 'hitsource/hit-img-phone-1.png',
+    imgshadow: ''
+  }
+})
+
+var hitTest = new Vue({
+  el: '#sect-hit-test',
+  data: {
+    bgCol: 'bg-blue1',
+    rhsBgCol: 'bg-white',
+    heading: 'Testing...1...2...3',
+    subheading: 'An Iterative, User Focused Approach',
+    para: 'Once we have the core features built, we plan to put our product into the hands of producers to test & refine the product.',
+    imageurl: 'hitsource/hit-img-5.jpg',
+    imgshadow: 'boxshadow-1'
+  }
+})
+
+var hitLaunch = new Vue({
+  el: '#sect-hit-launch',
+  data: {
+    bgCol: 'bg-blue2',
+    rhsBgCol: '',
+    heading: '3...2...1...Liftoff!',
+    subheading: 'In 2018...',
+    para: 'The development team are still putting together all the pieces of the puzzle. We plan to launch in early 2018.',
+    imageurl: '',
+    imgshadow: ''
+  }
+})
+
+
+var hitVisuals = new Vue({
+  el: '#sect-hit-visuals',
+  data: {
+    largeimages: [
+      { deskurl1: 'hitsource/hit-img-desktop-1.jpg', },
+      { deskurl1: 'hitsource/hitsource-marketplace-1.jpg', }
+    ],
+    moburl1: '',
+    moburl2: ''
+  }
+})
 
 
 
@@ -195,15 +510,32 @@ var traveltitle = new Vue({
 // ********** Page Loader *************** //
 // ********** ************ *************** //
 
+new Vue({
+  el: '#app'
+});
+
+// setTimeout(function() {
+//   new Vue({
+//     el: '#app'
+//   });
+// }, 1000);
+
+// remove loader after page load
+
+Element.prototype.remove = function() {
+    this.parentElement.removeChild(this);
+}
+NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+    for(var i = this.length - 1; i >= 0; i--) {
+        if(this[i] && this[i].parentElement) {
+            this[i].parentElement.removeChild(this[i]);
+        }
+    }
+}
+
 setTimeout(function() {
-  new Vue({
-    el: '#app'
-  });
-}, 1000);
-
-
-
-
+ document.getElementById("loader").remove();
+}, 3500);
 
 
 
@@ -223,7 +555,7 @@ setTimeout(function() {
     setInterval( function() {
         if ( didScroll ) {
             didScroll = false;
-            console.log('You scrolled');
+            // console.log('You scrolled');
             checkPosition();
             menuShow();
         }
@@ -257,8 +589,7 @@ setTimeout(function() {
 
 
 
-
-  // menu test !!!!!!!!!! //
+  // ******** Scrolling Menu - linked to scroll event in animateHTML **** //
 
   var lastScrollTop = 0;
 
@@ -272,9 +603,6 @@ setTimeout(function() {
      lastScrollTop = st;
   }
 
-
-
-// document.getElementById("body").classList.remove("no-show");
 
 
 

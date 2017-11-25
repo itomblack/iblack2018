@@ -27,14 +27,29 @@ html, body {
 //===============================================================================
 [v-cloak] { display: none; }
 
-.no-show { display: none; }
-.loader {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background-color: red;
-
+.fade-in {
+  animation: fade-in 3s ease;
 }
+
+@keyframes fade-in {
+  0%, 50% { 
+    opacity: 0;
+  } 100% { 
+    opacity: 1;
+  }
+}
+
+div {
+  position: relative;
+}
+
+.flex-cent {
+  display: flex;
+  align-items: center;
+}
+
+.no-show { display: none; }
+
 //header
 .header-wrap {
   padding: $reg-pad 0;
@@ -62,7 +77,8 @@ html, body {
 
 //sections
 .section-home-intro {
-  height: calc( 110vh ); 
+  height: calc( 90vh ); 
+  min-height: 300px;
   display: flex;
   align-items: center;
 }
@@ -74,15 +90,13 @@ html, body {
 .section-heading {
   height: calc( 60vh ); 
   min-height: 300px;
-  display: flex;
-  align-items: center;
 }
 
 .section-work {
   width: 100%;
   position: relative;
-  padding-top: 300px;
   padding-bottom: 200px;
+  padding-top: $xxvlrg-pad;
 
   @media screen and (max-width: $small) {
     padding-top: 200px;
@@ -90,10 +104,8 @@ html, body {
 }
 
 .section-sub-head {
-  height: calc( 80vh ); 
+  height: calc( 95vh ); 
   min-height: 300px;
-  display: flex;
-  align-items: center;
 }
 
 .section {
@@ -101,23 +113,37 @@ html, body {
   padding-bottom: $xxvlrg-pad;
 }
 
+.inline-100 {
+  display: inline-block;
+  width: 100%;
+}
+
+.mid-title-section {
+  width: 100%;
+  display: block;
+  height: 350px;
+  background: #000000;
+  background: linear-gradient(to bottom, $ink 0%, $ink 50%, $white 50%, $white 100%);
+
+  @media screen and (max-width: $small) {
+    height: 260px;
+  }
+}
 
 .mid-title-wrap {
-  height: 350px;
-  top: -175px;
+  height: 100%;
   left: 50%;
   border-left: 1px solid $blue1;
   position: absolute;
   padding: 0 $reg-pad;
   display: flex;
   align-items: flex-end;
+  color: $ink;
   
   h2 { margin-bottom: $sml-pad;}
   h5 { margin-bottom: 0; }
 
   @media screen and (max-width: $small) {
-    height: 260px;
-    top: -130px;
     left: $reg-pad;
   }
 }
@@ -163,7 +189,7 @@ html, body {
   }
   
   &:hover {
-    h4 { color: $blue1; }
+    h4 { color: $blue2; }
     h5 { color: $blue2; }
     figure { transform: scale(1.05); }
   }
@@ -242,6 +268,10 @@ html, body {
     margin-bottom: 0;
   }
 
+  p { font-weight: 400; }
+
+  h3 { margin-left: -2px; }
+
   h5 { margin-bottom: $sml-pad; }
   @media screen and (min-width: $small) {
     h5 { margin-top: $reg-pad; }
@@ -250,9 +280,10 @@ html, body {
 }
 
 .comp-wrap {
+  margin-bottom: $lrg-pad;
   h5 { margin-bottom: $reg-pad; }
   span {
-    padding: $sml-pad $med-pad;
+    padding: $sml-pad $reg-pad;
     border-radius: 50px;
     margin: 6px 6px 6px 0;
     display: inline-block;
@@ -265,6 +296,7 @@ html, body {
 //===============================================================================
 
 .hero-travel { background: url(/img/cs/travel/header-img-travel.jpg) no-repeat center center; }
+.hero-hits { background: url(/img/cs/hitsource/header-img-hit.jpg) no-repeat center center; }
 
 .cs-hero {
   height: 110vh;
@@ -272,5 +304,177 @@ html, body {
   background-color: $white;
   background-size: cover;
 }
+
+.cs-intro-wrap {
+  padding-top: $vlrg-pad;
+  padding-bottom: $vlrg-pad;
+  min-height: 95vh;
+
+  p, span, ul, a {
+    display: inline-block;
+    font-weight: 600;
+  }
+  span, ul {
+    color: $blue2;
+    display: inline;
+  }
+
+  span { margin-left: $sml-pad; }
+
+  a {
+    color: $blue2;
+    &:hover { color: $white; }
+  }
+
+}
+
+.lst-inline li {
+  display: inline-block;
+  margin-right: $sml-pad;
+
+  &:before {
+    color: $white;
+    content: "/";
+  }
+
+  &:first-of-type {
+    margin-left: 0;
+    &:before { content: ""; }
+  }
+}
+
+
+@media screen and (max-width: $medium) {
+  .flex-stack-med {
+    flex-direction: column; 
+  }
+}
+
+.max-550 { max-width: 550px; }
+
+.sect-rhs-wrap {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+
+  @media screen and (max-width: $medium) {
+
+  }
+}
+
+.sect-rhs {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  display: block;
+  overflow: hidden;
+
+  @media screen and (max-width: $medium) {
+    top: auto;
+    left: 0;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+  }
+}
+
+.sect-rhs-fill {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 70%;
+  display: block;
+
+  &::after {
+    content: "";
+    width: 100px;
+    height: 120%;
+    display: block;
+    position: absolute;
+    left: calc(0% - 50px);
+    top: -10%;
+    border-radius: 200%;
+  }
+
+  @media screen and (max-width: $medium) {
+    top: auto;
+    bottom: 0;
+    height: 70%;
+    width: 100%;
+
+    &::after {
+      width: 120%;
+      height: 100px;
+      left: -10%;
+      top: calc(0% - 50px);
+    }
+  }
+}
+
+.rhs-img, .lhs-img {
+  img {
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: $medium) {
+      float: left;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: $medium) {
+  .rhs-img {
+    margin-top: $vlrg-pad;
+  }
+
+  .lhs-img {
+    margin-bottom: $vlrg-pad;
+  }
+}
+
+.rhs-img-scroll {
+  width: calc(50% - 16px);
+  height: 100%;
+  overflow-y: scroll;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  img {
+    float: right;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  @media screen and (max-width: $medium) {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 64px;
+    height: 450px;
+  }
+}
+
+
+.product-shots-wrap {
+  text-align: center;
+  padding-top: $vlrg-pad;
+  padding-bottom: $vlrg-pad;
+
+  img { 
+    max-width: 100%;
+    margin-top: $vlrg-pad;
+  }
+}
+
+
+
+
 
 
