@@ -1,0 +1,34 @@
+<div class="grid cs-intro-wrap flex-cent">
+  <div class="col-2-3">
+    <h2> {{ heading }} </h2>
+    <h4> {{ subheading }} </h4>
+
+    <div>
+      <p>Role: </p>
+      <span>
+        <ul class="lst-inline">
+          <li v-for="item in roles">
+            {{ item.message }}
+          </li>
+        </ul>
+      </span>
+    </div>
+
+    <div>
+      <p>Agency: </p>
+      <p><span> {{ agency }} </span></p>
+    </div>
+
+    <div>
+      <p>Site: </p>
+
+      <template v-if="(url !== '')">
+        <span><a v-bind:href="url" target="_blank"> {{ sitetitle }} </a></span>
+      </template>
+      <template v-else>
+        <span><p> {{ sitetitle }} </p></span>
+      </template>
+    </div>
+   
+  </div>
+</div>
