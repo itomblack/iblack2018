@@ -53,7 +53,10 @@ $vLong: 1.5s;
   &::after { background: $blue2; }
 }
 
-.bg-blue3 { background: $blue3; }
+.bg-blue3 {
+  background: $blue3;
+  &::after { background: $blue3; }
+}
 
 .bg-ink, .bg-blue1 {
    a {

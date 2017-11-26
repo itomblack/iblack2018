@@ -117,11 +117,11 @@ var cvjob1 = new Vue({
     dates: 'May 2017 - Present',
     role: 'Senior Product Designer',
     bullets: [
-      { message: 'Product design for established businesses & fresh startups.' },
+      { message: 'Product design for established businesses & startups across North America.' },
       { message: 'Design workshop planning & facilitation for minor celebrities.' },
       { message: 'User research & product definition for the largest Credit Union in Canada.' },
-      { message: 'Collaborating with strategists, copywriters & developers.' },
-      { message: 'Developing the Invoke brand tone of voice.' }
+      { message: 'Project Scoping & Planning.' },
+      { message: 'Developing the Invoke brand communications.' }
     ]
   }
 })
@@ -136,7 +136,7 @@ var cvjob2 = new Vue({
       { message: 'Defining new business products with the Beyond Strategy team.' },
       { message: 'Developing agile, UX design processes within TravelSupermarket.' },
       { message: 'Leading UX workshops for the UK\'s 2nd largest Supermarket.' },
-      { message: 'Mentoring Junior Designers.' },
+      { message: 'Mentorship of new designers.' },
       { message: 'Design team recruitment.' }
     ]
   }
@@ -406,7 +406,7 @@ var hitTitle = new Vue({
 var hitIntro = new Vue({
   el: '#intro-hits',
   data: {
-    heading: 'The Exclusive Source For Beats',
+    heading: 'An Exclusive Source For Beats',
     subheading: 'Our ex-rapper client dreamt of building an invite-only marketplace for buying & selling beats. It was my job to bring it to life.',
     roles: [
       { message: 'Brand' },
@@ -427,7 +427,7 @@ var hitTalk = new Vue({
     rhsBgCol: 'bg-blue2',
     heading: 'Time To Talk',
     subheading: 'Stakeholder & Industry Research',
-    para: 'I partnered with the strategy team to understand the client\'s business. While strategist poured over forums, I ran guerilla research of my own with industry professionals to better understand the landscape. This confirmed our assumptions that hip-hop producers would be a key target audience.',
+    para: 'I partnered with the strategy team to understand the client\'s business. While strategists poured over forums, I ran guerilla research of my own with industry professionals to better understand the landscape. This confirmed our assumptions that hip-hop producers would be a key target audience.',
     imageurl: 'hitsource/hit-img-1.jpg',
     imgshadow: 'boxshadow-1'
   }
@@ -464,7 +464,7 @@ var hitBrand = new Vue({
     bgCol: 'bg-white',
     heading: 'A Fresh Start',
     subheading: 'Logo. Colour. Typography.',
-    para: 'Taking some cues from the client, and influences from Trap music culture, I developed a brand look & feel for the new product. This meant colours, typography & key UI elements.',
+    para: 'Taking some cues from the client, and influences from Trap music culture, I developed a brand look & feel for the new product. This meant palettes, typography & key UI elements.',
     imageurl: 'hitsource/hit-img-3.jpg',
     imgshadow: 'boxshadow-1'
   }
@@ -487,8 +487,8 @@ var hitConvo = new Vue({
     bgCol: 'bg-blue2',
     rhsBgCol: '',
     heading: 'We Need To Talk',
-    subheading: 'A conversational transactional approach',
-    para: 'Offline, conversation is key to negotiating the sale of a beat. I designed a convo-transactional interface that let the discussion continue online.',
+    subheading: 'A Conversational Transactional Approach',
+    para: 'Offline, conversation is key to negotiating the sale of a beat. I designed a convo-transactional interface that let that discussion continue online.',
     imageurl: 'hitsource/hit-img-phone-1.png',
     imgshadow: ''
   }
@@ -540,15 +540,15 @@ var archiveTitle = new Vue({
   el: '#page-title-archive',
   data: {
     heading: 'The Living Archive',
-    subheading: 'Recording The History Of A Historic Brand.'
+    subheading: 'Recording The History Of An Historic Brand.'
   }
 })
 
-var hitIntro = new Vue({
+var archiveIntro = new Vue({
   el: '#intro-archive',
   data: {
     heading: 'Exploring The Archives',
-    subheading: 'The UK\'s second largest supermarket chain wanted to digitise their historical assets to allow future generations to publically explore their past.',
+    subheading: 'The UK\'s second largest supermarket chain wanted to digitise their historical assets, allowing future generations to publically explore their past.',
     roles: [
       { message: 'UX Strategy' },
       { message: 'UI' }
@@ -558,6 +558,97 @@ var hitIntro = new Vue({
     url: ''
   }
 })
+
+var archivePitch = new Vue({
+  el: '#sect-archive-pitch',
+  data: {
+    bgCol: 'bg-blue2',
+    rhsBgCol: '',
+    heading: 'A Quick Pitch',
+    subheading: 'Two Weeks To Concept',
+    para: 'To secure project funding, our client needed to sell the concept to the board. Our team had two weeks to investigate their brief, understand the existing tech set-up, explore ideas, and present a solution.',
+    imageurl: 'archive/archive-img-phone-1.png',
+    imgshadow: ''
+  }
+})
+
+var archiveOne = new Vue({
+  el: '#sect-archive-one',
+  data: {
+    bgCol: 'bg-blue1',
+    rhsBgCol: 'bg-white',
+    heading: 'Out With The Old',
+    subheading: 'Replacing Four Old Sites With One Product.',
+    para: 'Accessibility to researchers, academia and media was key. I considered how we could provide an engaging new experience, without losing the functionality of the existing archive sites.',
+    imageurl: 'archive/archive-img-1.jpg',
+    imgshadow: 'boxshadow-1'
+  }
+})
+
+var archiveRabbit = new Vue({
+  el: '#sect-archive-rabbit',
+  data: {
+    bgCol: 'bg-blue2',
+    rhsBgCol: '',
+    heading: 'Down A Rabbit Hole',
+    subheading: 'Competitor Research On Curated Content',
+    para: 'Comparable experiences fell into two buckets: Richly curated linear storytelling experience, or data-driven interlinked content allowing a \'rabbit-hole\' exploration style. I saw opportunities for a combination of the two.',
+    imageurl: '',
+    imgshadow: ''
+  }
+})
+
+var archiveOoux = new Vue({
+  el: '#sect-archive-ooux',
+  data: {
+    bgCol: 'bg-white',
+    heading: 'Defining Interconnections',
+    subheading: 'An Object-Oriented UX Approach',
+    para: 'The archive would bring together over 20,000 digitised assets. I worked in Trello to define attributes and relationships for each part of the ecosystem.',
+    imageurl: 'archive/archive-img-2.jpg',
+    imgshadow: 'boxshadow-1'
+  }
+})
+
+
+var travelHmw = new Vue({
+  el: '#sect-archive-hmw',
+  data: {
+    bgCol: 'bg-blue1',
+    rhsBgCol: 'bg-blue2',
+    heading: 'How Might We?',
+    subheading: 'An Ideation Workshop',
+    para: 'To explore ideas for the experience, the whole team engaged in creative exercises around the topics of storytelling & nostalgia. I led a sub-group in sketching these concepts.',
+    imageurl: 'archive/archive-img-3.jpg',
+    imgshadow: 'boxshadow-1'
+  }
+})
+
+var archiveVisual = new Vue({
+  el: '#sect-archive-design',
+  data: {
+    bgCol: 'bg-white',
+    rhsBgCol: '',
+    heading: 'A Modern Aesthetic',
+    subheading: 'Pair-Designing At Speed',
+    para: 'I went straight from the whiteboard into hi-fi designs, working in tandem with another designer. A stripped back palette allowed each object to be the focus of attention. We focussed on key screens that would sell the concept best during the pitch.',
+    imageurl: 'archive/archive-img-4.png',
+    imgshadow: ''
+  }
+})
+
+var hitVisuals = new Vue({
+  el: '#sect-archive-visuals',
+  data: {
+    largeimages: [
+      { deskurl1: 'archive/archive-img-desktop-1.jpg', }
+    ],
+    moburl1: 'archive/archive-img-phone-2.jpg',
+    moburl2: 'archive/archive-img-phone-3.jpg'
+  }
+})
+
+ 
 
 
 
@@ -609,17 +700,6 @@ setTimeout(function() {
 
 
 // remove loader after page load
-
-Element.prototype.remove = function() {
-    this.parentElement.removeChild(this);
-}
-NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-    for(var i = this.length - 1; i >= 0; i--) {
-        if(this[i] && this[i].parentElement) {
-            this[i].parentElement.removeChild(this[i]);
-        }
-    }
-}
 
 setTimeout(function() {
  document.getElementById("loader").remove();
