@@ -1,11 +1,29 @@
 (function () { 'use strict';
 
 
+// var menu = new Vue({
+//   el: '#menu-bar',
+//   data: {
+//     message: 'Menu'
+//   },
+//   computed: {
+//     // a computed getter
+//     reversedMessage: function () {
+//       // `this` points to the vm instance
+//       return this.message.split('').reverse().join('')
+//     }
+//   }
+// })
+
+var test = function (){
+  console.log(clicked);
+}
+
 
 // ********** Project Items *************** //
 // ********** ************* *************** //
 
-  new Vue({
+  var home1 = new Vue({
     el: '#home-proj-1',
     data: {
       title: 'HitSource',
@@ -18,7 +36,7 @@
   });
 
 
-  new Vue({
+  var home2 = new Vue({
     el: '#home-proj-2',
     data: {
       title: 'Travel Supermarket',
@@ -30,31 +48,43 @@
     }
   });
 
-  new Vue({
+  var home2 = new Vue({
     el: '#home-proj-3',
+    data: {
+      title: 'The Living Archive',
+      subTitle: 'UX, UI',
+      imgClass: 'img-proj-archive',
+      imgSizeClass: 'project-item-wrap-sml',
+      internalurl: 'livingarchive-project.html',
+      externalurl: ''
+    }
+  });
+
+  var home3 = new Vue({
+    el: '#home-hack-1',
     data: {
       title: 'Blues Harp Hack',
       subTitle: 'Design, Development',
       imgClass: 'img-proj-harp',
-      imgSizeClass: 'project-item-wrap-sml',
+      imgSizeClass: 'project-item-wrap-sml top-offset',
       internalurl: '',
       externalurl: 'http://itomblack.github.io/harp/'
     }
   });
 
-  new Vue({
-    el: '#home-proj-4',
+  var home4 = new Vue({
+    el: '#home-hack-2',
     data: {
       title: 'Whisky Map Hack',
       subTitle: 'Design, Development',
       imgClass: 'img-proj-whisky',
-      imgSizeClass: 'project-item-wrap-sml top-offset',
+      imgSizeClass: 'project-item-wrap-sml',
       internalurl: '',
       externalurl: 'https://itomblack.github.io/whisky-map/'
     }
   });
 
-  new Vue({
+  var cvlinks = new Vue({
     el: '#cv-link',
     data: {
       title: 'Working 9-5',
@@ -504,22 +534,79 @@ var hitVisuals = new Vue({
 })
 
 
+/* Sainsburys Archive */
 
+var archiveTitle = new Vue({
+  el: '#page-title-archive',
+  data: {
+    heading: 'The Living Archive',
+    subheading: 'Recording The History Of A Historic Brand.'
+  }
+})
+
+var hitIntro = new Vue({
+  el: '#intro-archive',
+  data: {
+    heading: 'Exploring The Archives',
+    subheading: 'The UK\'s second largest supermarket chain wanted to digitise their historical assets to allow future generations to publically explore their past.',
+    roles: [
+      { message: 'UX Strategy' },
+      { message: 'UI' }
+    ],
+    agency: 'Beyond',
+    sitetitle: '',
+    url: ''
+  }
+})
 
 
 
 // ********** Page Loader *************** //
 // ********** ************ *************** //
 
+// var menu = new Vue({
+//     el: '#menu-bar',
+//     data: {
+//       menuseen: false,
+//       menutext: 'Menu'
+//     },
+//     methods: {
+//         openclosemenu: function (event) {
+//             console.log('test');
+//          this.menuseen = !this.menuseen;
+//          if (this.menutext == 'Menu') {
+//             this.menutext = 'Close';
+//          } 
+//          else {
+//             this.menutext = 'Menu';
+//          }
+//         }
+//       }
+//   });
+
 
 setTimeout(function() {
   new Vue({
     el: '#app',
     data: {
-      menuseen: false
-    }
+      menuseen: false,
+      menutext: 'Menu'
+    },
+    methods: {
+        openclosemenu: function (event) {
+
+         this.menuseen = !this.menuseen;
+         if (this.menutext == 'Menu') {
+            this.menutext = 'Close';
+         } 
+         else {
+            this.menutext = 'Menu';
+         }
+        }
+      }
   });
 }, 500);
+
 
 // remove loader after page load
 

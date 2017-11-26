@@ -18,8 +18,8 @@
       <p>Agency: </p>
       <p><span> {{ agency }} </span></p>
     </div>
-
-    <div>
+    
+    <div v-if="(sitetitle !== '')">
       <p>Site: </p>
 
       <template v-if="(url !== '')">

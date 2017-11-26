@@ -1,3 +1,4 @@
+
 <div id="menu-bar" class="header-wrap bg-ink">
   <!-- Header bar -->
   <div class="outer-pad svg-white">  
@@ -5,11 +6,11 @@
       @@include('../svg/logo.html')
     </a>
   </div><!-- Close header bar -->
-
+  
   <!-- Menu Content -->
   <transition name="slide-fade">
     <div id="menu-content" v-if="menuseen"> 
-      <div class="menu-wrap flex-cent flex-horiz-cent">
+      <div class="menu-wrap">
         <div class="">
           <a href="index.html"><h3 class="serif">Home</h3></a>
 
@@ -30,11 +31,10 @@
   </transition>
 
 
-  <h5 id="#menu-open" class="menu-btn color-blue2" v-on:click="menuseen = !menuseen">Menu</h5>
-
-  
+  <h5 id="menu-open" class="menu-btn color-blue2" v-on:click="openclosemenu"> {{ menutext }} </h5>
 
 </div>
+
 
 
 
