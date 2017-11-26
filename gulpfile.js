@@ -138,7 +138,7 @@ gulp.task( 'default', function(cb){
 
 // BUILD FOR PRODUCTION
 gulp.task( 'build', function(cb){
-  gulpSequence(['clean'], ['js-min', 'sass', 'img-opt'], ['html'], ['watch'] )(cb);
+  gulpSequence(['clean'], ['js-min', 'sass', 'img'], ['html'], ['watch'] )(cb);
 });
 
 
