@@ -548,7 +548,7 @@ var archiveIntro = new Vue({
   el: '#intro-archive',
   data: {
     heading: 'Exploring The Archives',
-    subheading: 'The UK\'s second largest supermarket chain wanted to digitise their historical assets, allowing future generations to publically explore their past.',
+    subheading: 'The UK\'s second largest supermarket chain wanted to digitise their historical assets, allowing future generations to publicly explore their past.',
     roles: [
       { message: 'UX Strategy' },
       { message: 'UI' }
