@@ -477,7 +477,7 @@ var hitConvo = new Vue({
     bgCol: 'bg-blue2',
     rhsBgCol: '',
     heading: 'We Need To Talk',
-    subheading: 'A Conversational Transactional Approach',
+    subheading: 'A Conversational Transactional Experience',
     para: 'Offline, conversation is key to negotiating the sale of a beat. I designed a convo-transactional interface that let that discussion continue online.',
     imageurl: 'hitsource/hit-img-phone-1.png',
     imgshadow: ''
