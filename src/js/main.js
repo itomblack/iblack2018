@@ -1,25 +1,5 @@
 (function () { 'use strict';
 
-
-// var menu = new Vue({
-//   el: '#menu-bar',
-//   data: {
-//     message: 'Menu'
-//   },
-//   computed: {
-//     // a computed getter
-//     reversedMessage: function () {
-//       // `this` points to the vm instance
-//       return this.message.split('').reverse().join('')
-//     }
-//   }
-// })
-
-var test = function (){
-  console.log(clicked);
-}
-
-
 // ********** Project Items *************** //
 // ********** ************* *************** //
 
@@ -28,10 +8,12 @@ var test = function (){
     data: {
       title: 'HitSource',
       subTitle: 'Brand, UX, UI',
-      imgClass: 'img-proj-hit',
+      imgClass: 'anim-flicker',
       imgSizeClass: 'project-item-wrap-lrg',
       internalurl: 'hitsource-project.html',
-      externalurl: ''
+      externalurl: '',
+      imgBackClass: 'img-proj-bg-hit',
+      imgpng: 'global/proj-hit-head.png'
     }
   });
 
@@ -44,7 +26,9 @@ var test = function (){
       imgClass: 'img-proj-travel',
       imgSizeClass: 'project-item-wrap-lrg top-offset',
       internalurl: 'travel-project.html',
-      externalurl: ''
+      externalurl: '',
+      imgBackClass: 'bg-white',
+      imgpng: ''
     }
   });
 
@@ -53,10 +37,12 @@ var test = function (){
     data: {
       title: 'The Living Archive',
       subTitle: 'UX, UI',
-      imgClass: 'img-proj-archive',
+      imgClass: '',
       imgSizeClass: 'project-item-wrap-sml',
       internalurl: 'livingarchive-project.html',
-      externalurl: ''
+      externalurl: '',
+      imgBackClass: 'bg-blue2',
+      imgpng: 'cs/archive/archive-img-phone-1.png'
     }
   });
 
@@ -68,7 +54,9 @@ var test = function (){
       imgClass: 'img-proj-harp',
       imgSizeClass: 'project-item-wrap-sml top-offset',
       internalurl: '',
-      externalurl: 'http://itomblack.github.io/harp/'
+      externalurl: 'http://itomblack.github.io/harp/',
+      imgBackClass: 'bg-white',
+      imgpng: ''
     }
   });
 
@@ -80,7 +68,9 @@ var test = function (){
       imgClass: 'img-proj-whisky',
       imgSizeClass: 'project-item-wrap-sml',
       internalurl: '',
-      externalurl: 'https://itomblack.github.io/whisky-map/'
+      externalurl: 'https://itomblack.github.io/whisky-map/',
+      imgBackClass: 'bg-white',
+      imgpng: ''
     }
   });
 

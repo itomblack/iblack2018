@@ -21,6 +21,7 @@ html, body {
   color: white;
 }
 
+.fade-in-element { transition: all .9s ease; }
 
 //===============================================================================
 // MENU
@@ -233,18 +234,27 @@ div {
   h5 { margin-bottom: $lrg-pad; }
 
   .proj-img-wrap {
-    background-color: $ink;
     height: 800px;
     overflow: hidden;
+
+    figure {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      transition: all $med ease;
+      display: flex;
+      align-items: center;
+
+      img {
+        max-width: 90%;
+        max-height: 90%;
+        margin: 0 auto;
+        display: block;
+      }
+    }
   }
 
-  figure {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    transition: all $med ease;
-  }
-  
+
   @media screen and (max-width: $large) {
     .proj-img-wrap { height: 600px; }
   }
@@ -277,6 +287,24 @@ div {
 .img-proj-archive { background: url(../img/global/proj-archive.jpg) no-repeat center center; }
 .img-proj-harp { background: url(../img/global/proj-harp.jpg) no-repeat center center; }
 .img-proj-whisky { background: url(../img/global/proj-whisky.jpg) no-repeat center center; }
+.img-proj-bg-hit { background: linear-gradient( 180deg, $ink 40%,#302873); }
+.anim-flicker { 
+  animation: flicker 3s infinite;
+  transition: all $short ease;
+}
+
+@keyframes flicker {
+  0% { opacity: 1; },
+  9% { opacity: 1; },
+  12% { opacity: .75; },
+  15% { opacity: 1; },
+  82% { opacity: 1; },
+  85% { opacity: .66; },
+  86% { opacity: .8; },
+  88% { opacity: .4; },
+  93% { opacity: 1; },
+  100% { opacity: 1; }
+}
 
 
 .hidden {
