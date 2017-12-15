@@ -110,7 +110,7 @@ var cvjob1 = new Vue({
       { message: 'Product design for established businesses & startups across North America.' },
       { message: 'Design workshop planning & facilitation for minor celebrities.' },
       { message: 'User research & product definition for the largest Credit Union in Canada.' },
-      { message: 'Project Scoping & Planning.' },
+      { message: 'Project scoping & planning.' },
       { message: 'Developing the Invoke brand communications.' }
     ]
   }
