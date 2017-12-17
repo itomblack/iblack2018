@@ -35,7 +35,10 @@ $vLong: 1.5s;
 
 
 //colour
-.bg-ink { background: $ink; }
+.bg-ink { 
+  background: $ink;
+  h4 { color: $blue2;}
+}
 .bg-white { 
   background: $white;
   h2, p { color: $ink; }
@@ -66,7 +69,7 @@ $vLong: 1.5s;
 }
 
 .color-ink { color: $ink; }
-.color-white { color: $white; }
+.color-white { color: $white !important; }
 .color-blue1 { color: $blue1; }
 .color-blue2 { color: $blue2; }
 .color-blue3 { color: $blue3; }

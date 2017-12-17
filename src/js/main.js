@@ -3,7 +3,7 @@
 // ********** Project Items *************** //
 // ********** ************* *************** //
 
-  var home1 = new Vue({
+  var home0 = new Vue({
     el: '#home-proj-1',
     data: {
       title: 'HitSource',
@@ -18,7 +18,7 @@
   });
 
 
-  var home2 = new Vue({
+  var home1 = new Vue({
     el: '#home-proj-2',
     data: {
       title: 'Travel Supermarket',
@@ -98,7 +98,7 @@ var cvtitle = new Vue({
     heading: 'Curriculum Vitae.',
     subheading: 'Story of my life - Abridged.'
   }
-})
+});
 
 var cvjob1 = new Vue({
   el: '#cv-job-1',
@@ -114,7 +114,7 @@ var cvjob1 = new Vue({
       { message: 'Developing the Invoke brand communications.' }
     ]
   }
-})
+});
 
 var cvjob2 = new Vue({
   el: '#cv-job-2',
@@ -130,7 +130,7 @@ var cvjob2 = new Vue({
       { message: 'Design team recruitment.' }
     ]
   }
-})
+});
 
 
 var cvjob3 = new Vue({
@@ -146,7 +146,7 @@ var cvjob3 = new Vue({
       { message: 'Contributing to culture by running art classes, blogging & presentations.' }
     ]
   }
-})
+});
 
 var cvjob4 = new Vue({
   el: '#cv-job-4',
@@ -160,7 +160,7 @@ var cvjob4 = new Vue({
       { message: 'Collaborating with brand planners, clients and suppliers to deliver engaging brand experiences.' }
     ]
   }
-})
+});
 
 
 
@@ -183,7 +183,7 @@ var cvSkills = new Vue({
       { message: '2D Animation' }
     ]
   }
-})
+});
 
 var cvTools = new Vue({
   el: '#cv-tools',
@@ -210,7 +210,7 @@ var cvTools = new Vue({
       { message: 'Keynote' },
     ]
   }
-})
+});
 
 
 // ********** Case Studies *************** //
@@ -224,7 +224,7 @@ var travelTitle = new Vue({
     heading: 'Travel Supermarket',
     subheading: 'Deal Comparison For Package Holidays.'
   }
-})
+});
 
 var travelIntro = new Vue({
   el: '#intro-travel',
@@ -241,25 +241,25 @@ var travelIntro = new Vue({
     sitetitle: 'TravelSupermarket.com',
     url: 'https://www.travelsupermarket.com'
   }
-})
+});
 
 var travelConstraint = new Vue({
   el: '#sect-travel-constraints',
   data: {
     bgCol: 'bg-blue1',
-    rhsBgCol: 'bg-white',
+    rhsBgCol: 'bg-blue2',
     heading: 'Embracing Constraints',
     subheading: 'The Discovery Phase',
     para: 'We had three months to get the TSM team on board, and deliver a measurable change to their business.',
     imageurl: 'travel/travel-img-0.jpg',
     imgshadow: 'boxshadow-1'
   }
-})
+});
 
 var travelInterview = new Vue({
   el: '#sect-travel-interview',
   data: {
-    bgCol: 'bg-blue2',
+    bgCol: 'bg-white',
     rhsBgCol: '',
     heading: 'Shhh. Listen...',
     subheading: 'Stakeholder & Team Interviews',
@@ -267,20 +267,32 @@ var travelInterview = new Vue({
     imageurl: '',
     imgshadow: ''
   }
-})
+});
 
 var travelData = new Vue({
   el: '#sect-travel-data',
   data: {
-    bgCol: 'bg-white',
-    rhsBgCol: 'bg-blue1',
+    bgCol: 'bg-blue1',
+    rhsBgCol: '',
     heading: 'Mine The Data',
     subheading: 'Quantitative Customer Analysis',
     para: 'Using collected reports and analytics, I built up a foundational portrait of the TSM site visitors. Something to build upon at least.',
-    imageurl: 'travel/travel-img-1.jpg',
+    imageurl: 'travel/travel-user-postits.jpg',
     imgshadow: 'boxshadow-1'
   }
-})
+});
+
+var travelUsers = new Vue({
+  el: '#sect-user-data',
+  data: {
+    largeimages: [
+      { deskurl1: 'travel/travel-users-1.jpg' },
+      { deskurl1: 'travel/travel-users-2.jpg' }
+    ],
+    moburl1: '',
+    moburl2: ''
+  }
+});
 
 var travelStrat = new Vue({
   el: '#sect-travel-strat',
@@ -293,7 +305,7 @@ var travelStrat = new Vue({
     imageurl: 'travel/travel-img-phone-1.png',
     imgshadow: ''
   }
-})
+});
 
 var travelContent = new Vue({
   el: '#sect-travel-content',
@@ -304,20 +316,31 @@ var travelContent = new Vue({
     para: 'A good design is nothing without the right content. I redesigned the results card into sections. First: Intrigue. Second: Inform. Third: Recommend.',
     imageurl: 'travel/travel-img-scroll-1.jpg',
   }
-})
+});
 
 
 var travelCode = new Vue({
   el: '#sect-travel-code',
   data: {
-    bgCol: 'bg-white',
+    bgCol: 'bg-ink',
     heading: '<h1>Functional Design</h1>',
     subheading: 'Live Prototyping In The Browser',
     para: 'For true responsive testing I built a prototype results card using HTML & SCSS. To incorporate real data, I used Handlebars.js.',
     imageurl: 'travel/travel-img-handlebar-1.png',
     imgshadow: ''
   }
-})
+});
+
+var travelVisuals = new Vue({
+  el: '#sect-travel-visuals',
+  data: {
+    largeimages: [
+      { deskurl1: 'travel/travel-img-desktop-1.jpg', }
+    ],
+    moburl1: 'travel/travel-img-phone-2.jpg',
+    moburl2: 'travel/travel-img-phone-3.jpg'
+  }
+});
 
 var travelTrack = new Vue({
   el: '#sect-travel-track',
@@ -325,12 +348,12 @@ var travelTrack = new Vue({
     bgCol: 'bg-blue2',
     rhsBgCol: 'bg-blue2',
     heading: 'Track The Data',
-    subheading: 'Planning The Product Roadmap',
+    subheading: 'Ensuring results through A/B testing',
     para: 'It was important to make sure we met or exceeded our KPIs. New designs were tested & tracked across a segment of users before a full launch.',
     imageurl: 'travel/travel-img-graph-1.png',
     imgshadow: ''
   }
-})
+});
 
 var travelIterate = new Vue({
   el: '#sect-travel-iterate',
@@ -342,31 +365,33 @@ var travelIterate = new Vue({
     imageurl: 'travel/tsm-card-animation-test-2.gif',
     imgshadow: 'boxshadow-1'
   }
-})
+});
 
 var travelEnd = new Vue({
   el: '#sect-travel-end',
   data: {
     bgCol: 'bg-blue1',
     rhsBgCol: '',
-    heading: 'End On A High',
-    subheading: 'Laying Foundations For Future Success',
-    para: 'As our process moved forward, we continued to improve the team\'s communication & collaboration, from faster feedback loops to design team check-ins, and improved product demos. However, the mountains of Vancouver were calling my name and we had to part ways.',
+    heading: 'A Living Document',
+    subheading: 'The Product Manual',
+    para: 'As our process moved forward, we continued to improve the team\'s communication & collaboration. We documented crucial design knowledge in the product manual to keep everyone up to date.',
     imageurl: '',
     imgshadow: ''
   }
-})
+});
 
-var travelVisuals = new Vue({
-  el: '#sect-travel-visuals',
+var travelGuide = new Vue({
+  el: '#sect-travel-guide',
   data: {
     largeimages: [
-      { deskurl1: 'travel/travel-img-desktop-1.jpg', }
+      { deskurl1: 'travel/travel-doc-1.jpg', },
+      { deskurl1: 'travel/travel-doc-2.jpg', },
+      { deskurl1: 'travel/travel-doc-3.jpg', }
     ],
-    moburl1: 'travel/travel-img-phone-2.jpg',
-    moburl2: 'travel/travel-img-phone-3.jpg'
+    moburl1: '',
+    moburl2: ''
   }
-})
+});
 
 
 var homeLink = new Vue({
@@ -391,7 +416,7 @@ var hitTitle = new Vue({
     heading: 'HitSource',
     subheading: 'The Music Maker\'s Marketplace.'
   }
-})
+});
 
 var hitIntro = new Vue({
   el: '#intro-hits',
@@ -407,58 +432,79 @@ var hitIntro = new Vue({
     sitetitle: 'Coming early 2018',
     url: ''
   }
-})
+});
 
 
 var hitTalk = new Vue({
   el: '#sect-hit-talk',
   data: {
-    bgCol: 'bg-blue1',
+    bgCol: 'bg-white',
     rhsBgCol: 'bg-blue2',
-    heading: 'Time To Talk',
+    heading: 'Let\'s Begin',
     subheading: 'Stakeholder & Industry Research',
-    para: 'I partnered with the strategy team to understand the client\'s business. While strategists poured over forums, I ran guerilla research of my own with industry professionals to better understand the landscape. This confirmed our assumptions that hip-hop producers would be a key target audience.',
+    para: 'I partnered with the strategy team to understand the client\'s business, and our intended audience. We interviewed stakeholders, industry professionals, and studied online forums.',
     imageurl: 'hitsource/hit-img-1.jpg',
     imgshadow: 'boxshadow-1'
   }
-})
+});
 
 var hitWorkshop = new Vue({
   el: '#sect-hit-workshop',
   data: {
-    bgCol: 'bg-white',
+    bgCol: 'bg-blue1',
     heading: 'Think First',
     subheading: 'The Discovery Phase',
     para: 'To define an MVP and flesh out the core architecture, I ran a design sprint, including 2 days of workshops. This combined Object Oriented UX activities, event-flows and brand discussions.',
     imageurl: 'hitsource/hit-img-2.jpg',
     imgshadow: ''
   }
-})
+});
 
-var hitMarket = new Vue({
-  el: '#sect-hit-market',
+var hitIa = new Vue({
+  el: '#sect-hit-ia',
   data: {
-    bgCol: 'bg-blue1',
-    rhsBgCol: '',
-    heading: 'Hit The Spot',
-    subheading: 'A Unique Market Position',
-    para: 'The strategy was to market high end, quality beats from vetted producers, with exclusive rights to the music, allowing for higher price points than the average beats marketplace.',
-    imageurl: 'hitsource/hit-img-4-1.png',
-    imgshadow: ''
+    largeimages: [
+      { deskurl1: 'hitsource/hit-ia.jpg' }
+    ],
+    moburl1: '',
+    moburl2: ''
   }
-})
+});
 
 var hitBrand = new Vue({
   el: '#sect-hit-brand',
   data: {
-    bgCol: 'bg-white',
+    bgCol: 'bg-blue2',
+    rhsBgCol: '',
     heading: 'A Fresh Start',
     subheading: 'Logo. Colour. Typography.',
     para: 'Taking some cues from the client, and influences from Trap music culture, I developed a brand look & feel for the new product. This meant palettes, typography & key UI elements.',
-    imageurl: 'hitsource/hit-img-3.jpg',
+    imageurl: 'hitsource/hit-img-type.jpg',
     imgshadow: 'boxshadow-1'
   }
-})
+});
+
+var hitNBrandViz = new Vue({
+  el: '#sect-hit-brand-vis',
+  data: {
+    largeimages: [
+      { deskurl1: 'hitsource/hit-img-ui-comps-1.jpg', }
+    ],
+    moburl1: '',
+    moburl2: ''
+  }
+});
+
+var hitUXViz = new Vue({
+  el: '#sect-hit-ux-vis',
+  data: {
+    largeimages: [
+      { deskurl1: 'hitsource/hit-ux-1.jpg', }
+    ],
+    moburl1: 'hitsource/hit-phone-ux-1.jpg',
+    moburl2: 'hitsource/hit-phone-ux-2.jpg'
+  }
+});
 
 var hitAgile = new Vue({
   el: '#sect-hit-agile',
@@ -469,7 +515,7 @@ var hitAgile = new Vue({
     para: 'Defining UI guidelines up-front meant we could design and build in each sprint. Design was always one step ahead. Every 2 weeks, new wireframes were reviewed with the client, before going into production.',
     imageurl: 'hitsource/hit-img-scroll-1.jpg',
   }
-})
+});
 
 var hitConvo = new Vue({
   el: '#sect-hit-convo',
@@ -482,7 +528,7 @@ var hitConvo = new Vue({
     imageurl: 'hitsource/hit-img-phone-1.png',
     imgshadow: ''
   }
-})
+});
 
 var hitTest = new Vue({
   el: '#sect-hit-test',
@@ -495,7 +541,7 @@ var hitTest = new Vue({
     imageurl: 'hitsource/hit-img-5.jpg',
     imgshadow: 'boxshadow-1'
   }
-})
+});
 
 var hitLaunch = new Vue({
   el: '#sect-hit-launch',
@@ -508,20 +554,21 @@ var hitLaunch = new Vue({
     imageurl: '',
     imgshadow: ''
   }
-})
+});
 
 
 var hitVisuals = new Vue({
   el: '#sect-hit-visuals',
   data: {
     largeimages: [
-      { deskurl1: 'hitsource/hit-img-desktop-1.jpg', },
-      { deskurl1: 'hitsource/hitsource-marketplace-1.jpg', }
+      { deskurl1: 'hitsource/hitsource-marketplace-1.jpg' },
+      { deskurl1: 'hitsource/hit-ui-beats.jpg' },
+      { deskurl1: 'hitsource/hit-img-desktop-1.jpg' }
     ],
     moburl1: '',
     moburl2: ''
   }
-})
+});
 
 
 /* Sainsburys Archive */
@@ -532,7 +579,7 @@ var archiveTitle = new Vue({
     heading: 'The Living Archive',
     subheading: 'Recording The History Of An Historic Brand.'
   }
-})
+});
 
 var archiveIntro = new Vue({
   el: '#intro-archive',
@@ -547,7 +594,7 @@ var archiveIntro = new Vue({
     sitetitle: '',
     url: ''
   }
-})
+});
 
 var archivePitch = new Vue({
   el: '#sect-archive-pitch',
@@ -560,7 +607,7 @@ var archivePitch = new Vue({
     imageurl: 'archive/archive-img-phone-1.png',
     imgshadow: ''
   }
-})
+});
 
 var archiveOne = new Vue({
   el: '#sect-archive-one',
@@ -573,7 +620,7 @@ var archiveOne = new Vue({
     imageurl: 'archive/archive-img-1.jpg',
     imgshadow: 'boxshadow-1'
   }
-})
+});
 
 var archiveRabbit = new Vue({
   el: '#sect-archive-rabbit',
@@ -586,7 +633,7 @@ var archiveRabbit = new Vue({
     imageurl: '',
     imgshadow: ''
   }
-})
+});
 
 var archiveOoux = new Vue({
   el: '#sect-archive-ooux',
@@ -598,7 +645,7 @@ var archiveOoux = new Vue({
     imageurl: 'archive/archive-img-2.jpg',
     imgshadow: 'boxshadow-1'
   }
-})
+});
 
 
 var travelHmw = new Vue({
@@ -612,7 +659,7 @@ var travelHmw = new Vue({
     imageurl: 'archive/archive-img-3.jpg',
     imgshadow: 'boxshadow-1'
   }
-})
+});
 
 var archiveVisual = new Vue({
   el: '#sect-archive-design',
@@ -625,9 +672,9 @@ var archiveVisual = new Vue({
     imageurl: 'archive/archive-img-4.png',
     imgshadow: ''
   }
-})
+});
 
-var hitVisuals = new Vue({
+var archiveVisuals = new Vue({
   el: '#sect-archive-visuals',
   data: {
     largeimages: [
@@ -636,7 +683,7 @@ var hitVisuals = new Vue({
     moburl1: 'archive/archive-img-phone-2.jpg',
     moburl2: 'archive/archive-img-phone-3.jpg'
   }
-})
+});
 
 
 // ********** Page Loader *************** //
@@ -718,29 +765,29 @@ setTimeout(function() {
 
     //show elements when on screen
     var elems,
-      windowHeight
+      windowHeight;
     var init = function () {
-      elems = document.getElementsByClassName('hidden')
-      windowHeight = window.innerHeight
-      addEventHandlers()
-    }
+      elems = document.getElementsByClassName('hidden');
+      windowHeight = window.innerHeight;
+      addEventHandlers();
+    };
     var addEventHandlers = function () {
-      window.addEventListener('resize', init)
-    }
+      window.addEventListener( 'resize', init );
+    };
     //if hidden items have moved onto screen, then show
     var checkPosition = function () {
       for (var i = 0; i < elems.length; i++) {
-        var posFromTop = elems[i].getBoundingClientRect().top
-        if (posFromTop - windowHeight <= -100) {
-          elems[i].className = elems[i].className.replace('hidden', 'fade-in-element')
+        var posFromTop = elems[i].getBoundingClientRect().top;
+        if ( posFromTop - windowHeight <= -100 ) {
+          elems[i].className = elems[i].className.replace( 'hidden', 'fade-in-element' );
         }
       }
-    }
+    };
     return {
       init: init
-    }
-  }
-  animateHTML().init()
+    };
+  };
+  animateHTML().init();
 
 
 
@@ -759,7 +806,7 @@ setTimeout(function() {
         document.getElementById("menu-bar").style.top = "0";
      }
      lastScrollTop = st;
-  }
+  };
 
 
 
