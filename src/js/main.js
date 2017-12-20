@@ -96,7 +96,7 @@ var cvtitle = new Vue({
   el: '#page-title-cv',
   data: {
     heading: 'Curriculum Vitae.',
-    subheading: 'Story of my life - Abridged.'
+    subheading: 'Ian Black.'
   }
 });
 
