@@ -810,8 +810,11 @@ setTimeout(function() {
 
 
 
+/* Show Hitsource */
 
-
+document.getElementById("show-hit").addEventListener("click", function() {
+  document.getElementById("hide-hit").remove();
+});
 
 
 }()); // end 'use strict'

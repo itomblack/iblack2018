@@ -117,6 +117,7 @@ html, body {
 //===============================================================================
 [v-cloak] { display: none; }
 
+
 .fade-in {
   animation: fade-in 2s ease;
 }
@@ -582,7 +583,19 @@ div {
 }
 
 
-
-
+.hide-page {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: $ink;
+  z-index: 999;
+}
+.show-page {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+}
 
 
