@@ -35,6 +35,20 @@
   var home2 = new Vue({
     el: '#home-proj-3',
     data: {
+      title: 'Financial Wellbeing',
+      subTitle: 'Research, Strategy, Prototyping',
+      imgClass: '',
+      imgSizeClass: 'project-item-wrap-sml',
+      internalurl: 'financial-wellbeing.html',
+      externalurl: '',
+      imgBackClass: 'bg-blue2',
+      imgpng: 'cs/archive/archive-img-phone-1.png'
+    }
+  });
+
+  var home2 = new Vue({
+    el: '#home-proj-4',
+    data: {
       title: 'The Living Archive',
       subTitle: 'UX, UI',
       imgClass: '',
@@ -230,7 +244,7 @@ var travelIntro = new Vue({
   el: '#intro-travel',
   data: {
     heading: 'Delivering A Better Experience',
-    subheading: 'This price comparison site for package holidays had a successful history but a rapidly declining audience. Our team committed to fixing it.',
+    subheading: 'This price comparison site for package holidays had a successful history but a rapidly declining audience. A strategic, test-driven approach brought it back on track.',
     roles: [
       { message: 'Strategy' },
       { message: 'UX' },
@@ -243,44 +257,73 @@ var travelIntro = new Vue({
   }
 });
 
-var travelConstraint = new Vue({
-  el: '#sect-travel-constraints',
+var travelPhase1 = new Vue({
+  el: '#sect-travel-phase-1',
   data: {
     bgCol: 'bg-blue1',
-    rhsBgCol: 'bg-blue2',
-    heading: 'Embracing Constraints',
-    subheading: 'The Discovery Phase',
-    para: 'We had three months to get the TSM team on board, and deliver a measurable change to their business.',
+    rhsBgCol: '',
+    heading: 'Phase 1',
+    subheading: 'Understanding The Problem',
+    para: '',
+    imageurl: '',
+    imgshadow: ''
+  }
+});
+
+var travelConstraint = new Vue({
+  el: '#sect-travel-stakeholder',
+  data: {
+    bgCol: 'bg-blue2',
+    rhsBgCol: 'bg-white',
+    heading: '',
+    subheading: 'Stakeholder & Team Interviews',
+    para: 'We met with team members across multiple offices. It was clear office dynamics we\'re as important as design to the success of this project.',
     imageurl: 'travel/travel-img-0.jpg',
     imgshadow: 'boxshadow-1'
   }
 });
 
-var travelInterview = new Vue({
-  el: '#sect-travel-interview',
-  data: {
-    bgCol: 'bg-white',
-    rhsBgCol: '',
-    heading: 'Shhh. Listen...',
-    subheading: 'Stakeholder & Team Interviews',
-    para: 'We spent the first week listening to STLs, Data Scientists, BA\'s & Designers across the country. This highlighted where our team could add the most value.',
-    imageurl: '',
-    imgshadow: ''
-  }
-});
 
 var travelData = new Vue({
   el: '#sect-travel-data',
   data: {
     bgCol: 'bg-blue1',
     rhsBgCol: '',
-    heading: 'Mine The Data',
-    subheading: 'Quantitative Customer Analysis',
-    para: 'Using collected reports and analytics, I built up a foundational portrait of the TSM site visitors. Something to build upon at least.',
+    heading: '',
+    subheading: 'Customer Research',
+    para: 'Using the client\'s existing reports and analytics, I built up a foundational portrait of the TSM site visitors. This would be continuously adapted and added to as we learned more during the project.',
     imageurl: 'travel/travel-user-postits.jpg',
     imgshadow: 'boxshadow-1'
   }
 });
+
+var travelworkshops = new Vue({
+  el: '#sect-travel-workshops',
+  data: {
+    bgCol: 'bg-blue1',
+    rhsBgCol: '',
+    heading: '',
+    subheading: 'Design Thinking Workshops',
+    para: 'Running creative workshops was a tactic to collect knowledge from the client team.',
+    imageurl: 'travel/travel-img-1.jpg',
+    imgshadow: 'boxshadow-1'
+  }
+});
+
+
+var travelPhase2 = new Vue({
+  el: '#sect-travel-phase-2',
+  data: {
+    bgCol: 'bg-white',
+    rhsBgCol: '',
+    heading: 'Phase 2',
+    subheading: 'Designing For Price Comparison',
+    para: '',
+    imageurl: '',
+    imgshadow: ''
+  }
+});
+
 
 var travelUsers = new Vue({
   el: '#sect-user-data',
@@ -297,12 +340,25 @@ var travelUsers = new Vue({
 var travelStrat = new Vue({
   el: '#sect-travel-strat',
   data: {
-    bgCol: 'bg-blue2',
-    rhsBgCol: 'bg-blue2',
-    heading: 'Starting With Strategy',
+    bgCol: 'bg-blue1',
+    rhsBgCol: '',
+    heading: '',
     subheading: 'Planning The Product Roadmap',
     para: 'With our understanding of the new business strategy, we highlighted search results as the first design challenge. We broke this down further into testable product changes.',
     imageurl: 'travel/travel-img-phone-1.png',
+    imgshadow: ''
+  }
+});
+
+var travelcompanalysis = new Vue({
+  el: '#sect-travel-companalysis',
+  data: {
+    bgCol: 'bg-white',
+    rhsBgCol: 'bg-blue2',
+    heading: '',
+    subheading: 'Competitive Analsyis',
+    para: 'I undertook an analysis of Travel Supermarket and their biggest competitors, identifying the pros and cons of each approach across multiple device sizes.',
+    imageurl: 'travel/travel-img-2.jpg',
     imgshadow: ''
   }
 });
@@ -311,7 +367,7 @@ var travelContent = new Vue({
   el: '#sect-travel-content',
   data: {
     bgCol: 'bg-blue1',
-    heading: 'The King Is Here',
+    heading: '',
     subheading: 'A Content-First Approach',
     para: 'A good design is nothing without the right content. I redesigned the results card into sections. First: Intrigue. Second: Inform. Third: Recommend.',
     imageurl: 'travel/travel-img-scroll-1.jpg',
@@ -323,8 +379,8 @@ var travelCode = new Vue({
   el: '#sect-travel-code',
   data: {
     bgCol: 'bg-ink',
-    heading: '<h1>Functional Design</h1>',
-    subheading: 'Live Prototyping In The Browser',
+    heading: '',
+    subheading: 'Live Prototyping, With Real Data',
     para: 'For true responsive testing I built a prototype results card using HTML & SCSS. To incorporate real data, I used Handlebars.js.',
     imageurl: 'travel/travel-img-handlebar-1.png',
     imgshadow: ''
@@ -347,8 +403,8 @@ var travelTrack = new Vue({
   data: {
     bgCol: 'bg-blue2',
     rhsBgCol: 'bg-blue2',
-    heading: 'Track The Data',
-    subheading: 'Ensuring results through A/B testing',
+    heading: '',
+    subheading: 'Delivering Results Through A/B Testing',
     para: 'It was important to make sure we met or exceeded our KPIs. New designs were tested & tracked across a segment of users before a full launch.',
     imageurl: 'travel/travel-img-graph-1.png',
     imgshadow: ''
@@ -359,22 +415,51 @@ var travelIterate = new Vue({
   el: '#sect-travel-iterate',
   data: {
     bgCol: 'bg-white',
-    heading: 'Iterate, Iterate, Iterate',
-    subheading: 'Because One Is Never Enough',
-    para: 'Redesign No.1 was a success, but we wanted even better results. My second design tested a new approach, improving results further.',
+    heading: '',
+    subheading: 'An Iterative Approach',
+    para: 'Redesign No.1 was a success, but we knew we could do better and learn more. My second design delivered greater information up front to the user, and removed the focus on recommedations. It was another hit with users.',
     imageurl: 'travel/tsm-card-animation-test-2.gif',
     imgshadow: 'boxshadow-1'
   }
 });
+
+
+var travelVisuals2 = new Vue({
+  el: '#sect-travel-visuals2',
+  data: {
+    largeimages: [
+      { deskurl1: 'travel/travel-img-desktop-2.jpg', }
+    ],
+    moburl1: 'travel/travel-img-phone-4.jpg',
+    moburl2: 'travel/travel-img-phone-5.jpg'
+  }
+});
+
+
+/* Phase 3 */
+
+var travelPhase2 = new Vue({
+  el: '#sect-travel-phase-3',
+  data: {
+    bgCol: 'bg-blue2',
+    rhsBgCol: '',
+    heading: 'Phase 3',
+    subheading: 'Leaving A Legacy',
+    para: '',
+    imageurl: '',
+    imgshadow: ''
+  }
+});
+
 
 var travelEnd = new Vue({
   el: '#sect-travel-end',
   data: {
     bgCol: 'bg-blue1',
     rhsBgCol: '',
-    heading: 'A Living Document',
+    heading: '',
     subheading: 'The Product Manual',
-    para: 'As our process moved forward, we continued to improve the team\'s communication & collaboration. We documented crucial design knowledge in the product manual to keep everyone up to date.',
+    para: 'As our process moved forward, we continued to improve the team\'s communication & collaboration. I documented crucial design knowledge in the product manual, a living sketch file I created to serve both existing a new design team members.',
     imageurl: '',
     imgshadow: ''
   }
@@ -809,12 +894,6 @@ setTimeout(function() {
   };
 
 
-
-/* Show Hitsource */
-
-document.getElementById("show-hit").addEventListener("click", function() {
-  document.getElementById("hide-hit").remove();
-});
 
 
 }()); // end 'use strict'
