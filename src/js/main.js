@@ -52,7 +52,7 @@
       title: 'The Living Archive',
       subTitle: 'UX, UI',
       imgClass: '',
-      imgSizeClass: 'project-item-wrap-sml',
+      imgSizeClass: 'project-item-wrap-sml top-offset',
       internalurl: 'livingarchive-project.html',
       externalurl: '',
       imgBackClass: 'bg-blue2',
@@ -66,7 +66,7 @@
       title: 'Blues Harp Hack',
       subTitle: 'Design, Development',
       imgClass: 'img-proj-harp',
-      imgSizeClass: 'project-item-wrap-sml top-offset',
+      imgSizeClass: 'project-item-wrap-sml',
       internalurl: '',
       externalurl: 'http://itomblack.github.io/harp/',
       imgBackClass: 'bg-white',
@@ -80,7 +80,7 @@
       title: 'Whisky Map Hack',
       subTitle: 'Design, Development',
       imgClass: 'img-proj-whisky',
-      imgSizeClass: 'project-item-wrap-sml',
+      imgSizeClass: 'project-item-wrap-sml top-offset',
       internalurl: '',
       externalurl: 'https://itomblack.github.io/whisky-map/',
       imgBackClass: 'bg-white',
@@ -507,7 +507,7 @@ var hitIntro = new Vue({
   el: '#intro-hits',
   data: {
     heading: 'An Exclusive Source For Beats',
-    subheading: 'Our ex-rapper client dreamt of building an invite-only marketplace for buying & selling beats. It was my job to bring it to life.',
+    subheading: 'After leaving the performance side of the hip-hop game, this client dreamt of building an invite-only marketplace for buying & selling beats. My job was to bring it to life.',
     roles: [
       { message: 'Brand' },
       { message: 'UX' },
@@ -520,12 +520,27 @@ var hitIntro = new Vue({
 });
 
 
+/*Phase 1 */
+
+var hitphase1 = new Vue({
+  el: '#sect-hit-phase1',
+  data: {
+    bgCol: 'bg-blue2',
+    rhsBgCol: '',
+    heading: 'Phase 1',
+    subheading: 'Discovery & Planning',
+    para: '',
+    imageurl: '',
+    imgshadow: ''
+  }
+});
+
 var hitTalk = new Vue({
   el: '#sect-hit-talk',
   data: {
     bgCol: 'bg-white',
-    rhsBgCol: 'bg-blue2',
-    heading: 'Let\'s Begin',
+    rhsBgCol: 'bg-blue1',
+    heading: '',
     subheading: 'Stakeholder & Industry Research',
     para: 'I partnered with the strategy team to understand the client\'s business, and our intended audience. We interviewed stakeholders, industry professionals, and studied online forums.',
     imageurl: 'hitsource/hit-img-1.jpg',
@@ -536,10 +551,10 @@ var hitTalk = new Vue({
 var hitWorkshop = new Vue({
   el: '#sect-hit-workshop',
   data: {
-    bgCol: 'bg-blue1',
-    heading: 'Think First',
-    subheading: 'The Discovery Phase',
-    para: 'To define an MVP and flesh out the core architecture, I ran a design sprint, including 2 days of workshops. This combined Object Oriented UX activities, event-flows and brand discussions.',
+    bgCol: 'bg-blue2',
+    heading: '',
+    subheading: 'The Design Sprint Workshops',
+    para: 'To define an MVP and flesh out the core architecture, I ran a design sprint, including 2 days of workshops. Client, Strategy, Design & Development all gathered together to think about Object Oriented UX and product event-flows.',
     imageurl: 'hitsource/hit-img-2.jpg',
     imgshadow: ''
   }
@@ -556,14 +571,30 @@ var hitIa = new Vue({
   }
 });
 
-var hitBrand = new Vue({
-  el: '#sect-hit-brand',
+
+/* Phase 2 */
+
+var hitphase1 = new Vue({
+  el: '#sect-hit-phase2',
   data: {
     bgCol: 'bg-blue2',
     rhsBgCol: '',
-    heading: 'A Fresh Start',
+    heading: 'Phase 2',
+    subheading: 'Building The Brand',
+    para: '',
+    imageurl: '',
+    imgshadow: ''
+  }
+});
+
+var hitBrand = new Vue({
+  el: '#sect-hit-brand',
+  data: {
+    bgCol: 'bg-blue1',
+    rhsBgCol: '',
+    heading: '',
     subheading: 'Logo. Colour. Typography.',
-    para: 'Taking some cues from the client, and influences from Trap music culture, I developed a brand look & feel for the new product. This meant palettes, typography & key UI elements.',
+    para: 'Taking some cues from the client, and influences from Trap music culture, I developed a brand look & feel for the new product. This meant colour palettes, typography & key UI elements. The client loved the fresh look.',
     imageurl: 'hitsource/hit-img-type.jpg',
     imgshadow: 'boxshadow-1'
   }
@@ -577,6 +608,23 @@ var hitNBrandViz = new Vue({
     ],
     moburl1: '',
     moburl2: ''
+  }
+});
+
+
+
+/* Phase 3 */
+
+var hitphase1 = new Vue({
+  el: '#sect-hit-phase3',
+  data: {
+    bgCol: 'bg-blue2',
+    rhsBgCol: '',
+    heading: 'Phase 3',
+    subheading: 'Design & Development',
+    para: '',
+    imageurl: '',
+    imgshadow: ''
   }
 });
 
@@ -595,9 +643,9 @@ var hitAgile = new Vue({
   el: '#sect-hit-agile',
   data: {
     bgCol: 'bg-blue1',
-    heading: 'Agile In Action',
-    subheading: 'Design & Development Working Together',
-    para: 'Defining UI guidelines up-front meant we could design and build in each sprint. Design was always one step ahead. Every 2 weeks, new wireframes were reviewed with the client, before going into production.',
+    heading: '',
+    subheading: 'Agile In Action',
+    para: 'Defining UI guidelines up-front meant we could design and build in each sprint. I was always one sprint ahead. Every 2 weeks, my new wireframes were reviewed with the client, before going into production.',
     imageurl: 'hitsource/hit-img-scroll-1.jpg',
   }
 });
@@ -607,8 +655,8 @@ var hitConvo = new Vue({
   data: {
     bgCol: 'bg-blue2',
     rhsBgCol: '',
-    heading: 'We Need To Talk',
-    subheading: 'A Conversational Transactional Experience',
+    heading: '',
+    subheading: 'A Convo-Transactional Experience',
     para: 'Offline, conversation is key to negotiating the sale of a beat. I designed a convo-transactional interface that let that discussion continue online.',
     imageurl: 'hitsource/hit-img-phone-1.png',
     imgshadow: ''
@@ -620,26 +668,15 @@ var hitTest = new Vue({
   data: {
     bgCol: 'bg-blue1',
     rhsBgCol: 'bg-white',
-    heading: 'Testing...1...2...3',
-    subheading: 'An Iterative, User Focused Approach',
-    para: 'Once we have the core features built, we plan to put our product into the hands of producers to test & refine the product.',
+    heading: '',
+    subheading: 'Build. Test. Learn.',
+    para: 'When the MVP product is finished, I will be testing the product in the hands of producers to iron out any kinks.',
     imageurl: 'hitsource/hit-img-5.jpg',
     imgshadow: 'boxshadow-1'
   }
 });
 
-var hitLaunch = new Vue({
-  el: '#sect-hit-launch',
-  data: {
-    bgCol: 'bg-blue2',
-    rhsBgCol: '',
-    heading: '3...2...1...Liftoff!',
-    subheading: 'In 2018...',
-    para: 'The development team are still putting together all the pieces of the puzzle. We plan to launch in early 2018.',
-    imageurl: '',
-    imgshadow: ''
-  }
-});
+
 
 
 var hitVisuals = new Vue({
@@ -648,7 +685,8 @@ var hitVisuals = new Vue({
     largeimages: [
       { deskurl1: 'hitsource/hitsource-marketplace-1.jpg' },
       { deskurl1: 'hitsource/hit-ui-beats.jpg' },
-      { deskurl1: 'hitsource/hit-img-desktop-1.jpg' }
+      { deskurl1: 'hitsource/hit-img-desktop-1.jpg' },
+      { deskurl1: 'hitsource/hit-img-desktop-2.jpg' }
     ],
     moburl1: '',
     moburl2: ''
