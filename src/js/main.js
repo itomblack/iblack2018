@@ -35,7 +35,7 @@
   var home2 = new Vue({
     el: '#home-proj-1',
     data: {
-      title: 'Financial Wellbeing',
+      title: 'Financial Fitness',
       subTitle: 'Research, Strategy, Prototyping',
       imgClass: '',
       imgSizeClass: 'project-item-wrap-lrg',
@@ -118,14 +118,16 @@ var cvjob1 = new Vue({
   el: '#cv-job-1',
   data: {
     company: 'Invoke',
-    dates: 'May 2017 - Present',
+    dates: 'May 2017 - Feb 2018',
     role: 'Senior Product Designer',
     bullets: [
-      { message: 'Product design for established businesses & startups across North America.' },
-      { message: 'Design workshop planning & facilitation for minor celebrities.' },
-      { message: 'User research & product definition for the largest Credit Union in Canada.' },
+      { message: 'Product strategy & design for established businesses & startups across North America.' },
+      { message: 'Product strategy for the largest Credit Union in Canada.' },
+      { message: 'Brand and product design for a new online marketplace.' },
+      { message: 'Running sprint-based rapid prototyping & user testing sessions with clients.' },
+      { message: 'Design workshop planning & facilitation.' },
       { message: 'Project scoping & planning.' },
-      { message: 'Developing the Invoke brand communications.' }
+      { message: 'Re-designed internal company processes and communications.' }
     ]
   }
 });
@@ -140,7 +142,7 @@ var cvjob2 = new Vue({
       { message: 'Defining new business products with the Beyond Strategy team.' },
       { message: 'Developing agile, UX design processes within TravelSupermarket.' },
       { message: 'Leading UX workshops for the UK\'s 2nd largest Supermarket.' },
-      { message: 'Mentorship of new designers.' },
+      { message: 'Mentoring new design team members.' },
       { message: 'Design team recruitment.' }
     ]
   }
@@ -213,6 +215,7 @@ var cvTools = new Vue({
       { message: 'Sketch' },
       { message: 'InVision' },
       { message: 'Zeplin' },
+      { message: 'Realtime Board' },
       { message: 'Illustrator' },
       { message: 'Photoshop' },
       { message: 'Lightroom' },
@@ -810,16 +813,12 @@ var archiveVisuals = new Vue({
 
 
 
-
-
-
-
 /* Financial Wellbeing */
 
 var finTitle = new Vue({
   el: '#page-title-fin',
   data: {
-    heading: 'Financial Wellbeing',
+    heading: 'Financial Fitness',
     subheading: 'A Customer-Focussed Approach To Finance'
   }
 });
@@ -863,7 +862,7 @@ var finA = new Vue({
     rhsBgCol: '',
     heading: '',
     subheading: 'The Customer Journey',
-    para: 'Using the expertise of the client team we mapped out the journey of a typical customer. We identified pain points to investigate further through research.',
+    para: 'Using the expertise of the client team we mapped out the journey of a typical customer, identifying pain points to explore further through research.',
     imageurl: 'finance/fin-img-1.jpg',
     imgshadow: 'boxshadow-1'
   }
@@ -919,7 +918,7 @@ var finD = new Vue({
     rhsBgCol: '',
     heading: '',
     subheading: 'Design Workshops',
-    para: 'I ran design workshops with the team to generate and refine ideas for prototyping. The client team rose to the challenge of the Crazy 8 sketch process in great form!',
+    para: 'I ran creative sessions with the team to generate and refine ideas for the first prototype. The client team rose to the challenge of the Crazy 8 sketch process in great form!',
     imageurl: 'finance/fin-img-4.jpg',
     imgshadow: 'boxshadow-1'
   }
@@ -979,7 +978,7 @@ var finG = new Vue({
     rhsBgCol: '',
     heading: '',
     subheading: 'Your Financial Fitbit',
-    para: 'Based on our learnings, and current market trends, our strategy focused on building a financial fitness program, that guides people through the various stages of financial understanding and transformation. The final details of this are under wraps and the team believes it will have huge value.',
+    para: 'Based on our learnings, and current market trends, our strategy focused on building a financial fitness program that guides people through the various stages of financial understanding and transformation. The final details of this are under wraps and the team believes it will have huge value.',
     imageurl: 'finance/fin-img-6.jpg',
     imgshadow: 'boxshadow-1'
   }
@@ -1118,6 +1117,13 @@ setTimeout(function() {
         }
     }, 50);
 
+
+
+
+
+
+
+
     //show elements when on screen
     var elems,
       windowHeight;
@@ -1146,8 +1152,12 @@ setTimeout(function() {
 
 
 
-  // ******** Scrolling Menu - linked to scroll event in animateHTML **** //
 
+
+
+
+
+  // ******** Scrolling Menu - linked to scroll event in animateHTML **** //
   var lastScrollTop = 0;
 
   var menuShow = function () {  
@@ -1162,6 +1172,9 @@ setTimeout(function() {
      }
      lastScrollTop = st;
   };
+
+  /* End menu */
+
 
 
 
