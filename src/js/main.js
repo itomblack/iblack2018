@@ -4,12 +4,12 @@
 // ********** ************* *************** //
 
   var home0 = new Vue({
-    el: '#home-proj-1',
+    el: '#home-proj-2',
     data: {
       title: 'HitSource',
       subTitle: 'Brand, UX, UI',
       imgClass: 'anim-flicker',
-      imgSizeClass: 'project-item-wrap-lrg',
+      imgSizeClass: 'project-item-wrap-lrg  top-offset',
       internalurl: 'hitsource-project.html',
       externalurl: '',
       imgBackClass: 'img-proj-bg-hit',
@@ -19,29 +19,29 @@
 
 
   var home1 = new Vue({
-    el: '#home-proj-2',
+    el: '#home-proj-3',
     data: {
       title: 'Travel Supermarket',
       subTitle: 'Strategy, UX, Prototyping',
       imgClass: 'img-proj-travel',
-      imgSizeClass: 'project-item-wrap-lrg top-offset',
+      imgSizeClass: 'project-item-wrap-sml',
       internalurl: 'travel-project.html',
       externalurl: '',
-      imgBackClass: 'bg-white',
+      imgBackClass: 'bg-blue1',
       imgpng: ''
     }
   });
 
   var home2 = new Vue({
-    el: '#home-proj-3',
+    el: '#home-proj-1',
     data: {
       title: 'Financial Wellbeing',
       subTitle: 'Research, Strategy, Prototyping',
       imgClass: '',
-      imgSizeClass: 'project-item-wrap-sml',
+      imgSizeClass: 'project-item-wrap-lrg',
       internalurl: 'finance-project.html',
       externalurl: '',
-      imgBackClass: 'bg-blue2',
+      imgBackClass: 'bg-blue1',
       imgpng: 'cs/finance/fin-img-phone-1.png'
     }
   });
@@ -55,7 +55,7 @@
       imgSizeClass: 'project-item-wrap-sml top-offset',
       internalurl: 'livingarchive-project.html',
       externalurl: '',
-      imgBackClass: 'bg-blue2',
+      imgBackClass: 'bg-blue1',
       imgpng: 'cs/archive/archive-img-phone-1.png'
     }
   });
@@ -820,7 +820,7 @@ var finTitle = new Vue({
   el: '#page-title-fin',
   data: {
     heading: 'Financial Wellbeing',
-    subheading: 'A Customer Focussed Approach To Finance'
+    subheading: 'A Customer-Focussed Approach To Finance'
   }
 });
 
@@ -933,7 +933,7 @@ var finE = new Vue({
     rhsBgCol: '',
     heading: '',
     subheading: 'Rapid Prototyping',
-    para: 'We had lots of ideas that needed validating. I built prototypes on a weekly basis and ran user testing sessions to get both qualitative and quantitative feedback.',
+    para: 'There were plenty of ideas that needed validating. I built prototypes on a weekly basis and ran user testing sessions to get both qualitative and quantitative feedback.',
     imageurl: 'finance/fin-img-phone-1.png',
     imgshadow: ''
   }
@@ -979,7 +979,7 @@ var finG = new Vue({
     rhsBgCol: '',
     heading: '',
     subheading: 'Your Financial Fitbit',
-    para: 'Based on our learnings, and current market trends, our strategy focused on building a financial fitness program, that guides people through the various stages of financial understanding and transformation. The final details of this are still in the the works.',
+    para: 'Based on our learnings, and current market trends, our strategy focused on building a financial fitness program, that guides people through the various stages of financial understanding and transformation. The final details of this are under wraps and the team believes it will have huge value.',
     imageurl: 'finance/fin-img-6.jpg',
     imgshadow: 'boxshadow-1'
   }
@@ -1005,7 +1005,7 @@ var finH = new Vue({
   data: {
     bgCol: 'bg-white',
     heading: '',
-    subheading: 'A New Type Of Product',
+    subheading: 'A New Type Of Account',
     para: 'To go with the digital product, the client will be creating a new type of bank account, that helps support the financial habits we aim to encourage.',
     imageurl: 'finance/fin-img-scroll-1.jpg',
   }
@@ -1028,13 +1028,34 @@ var finI = new Vue({
 var finJ = new Vue({
   el: '#sect-fin-team',
   data: {
-    bgCol: 'bg-white',
+    bgCol: 'bg-blue2',
     rhsBgCol: '',
     heading: '',
     subheading: 'A New Team Structure',
     para: 'To build and launch the product, an Agile Transformation is underway, creating development teams focussed around each segments of the new experience. All systems are go!',
-    imageurl: 'finance/fin-img-7.jpg',
-    imgshadow: 'boxshadow-1'
+    imageurl: 'finance/fin-img-phone-2.png',
+    imgshadow: ''
+  }
+});
+
+var finK = new Vue({
+  el: '#sect-fin-visuals',
+  data: {
+    largeimages: [
+    ],
+    moburl1: 'finance/fin-img-phone-2.jpg',
+    moburl2: 'finance/fin-img-phone-3.jpg'
+  }
+});
+
+var finL = new Vue({
+  el: '#sect-fin-visuals2',
+  data: {
+    largeimages: [
+      { deskurl1: 'finance/fin-img-desktop-1.jpg', }
+    ],
+    moburl1: 'finance/fin-img-phone-4.jpg',
+    moburl2: 'finance/fin-img-phone-5.jpg'
   }
 });
 
