@@ -600,3 +600,24 @@ div {
 }
 
 
+.instafeed {
+  width: 100%;
+
+  a, img {
+    width: 50%;
+    margin-bottom: -3px;
+  }
+
+  @media screen and (min-width: $small) { 
+    a, img { width: 25%; }
+  }
+
+  @media screen and (min-width: $large) { 
+    a, img { width: 12.5%; }
+  }
+
+  
+
+  
+
+}
