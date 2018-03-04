@@ -39,10 +39,10 @@
       subTitle: 'Research, Strategy, Prototyping',
       imgClass: '',
       imgSizeClass: 'project-item-wrap-sml',
-      internalurl: 'financial-wellbeing.html',
+      internalurl: 'finance-project.html',
       externalurl: '',
       imgBackClass: 'bg-blue2',
-      imgpng: 'cs/archive/archive-img-phone-1.png'
+      imgpng: 'cs/finance/fin-img-phone-1.png'
     }
   });
 
@@ -677,8 +677,6 @@ var hitTest = new Vue({
 });
 
 
-
-
 var hitVisuals = new Vue({
   el: '#sect-hit-visuals',
   data: {
@@ -809,28 +807,241 @@ var archiveVisuals = new Vue({
 });
 
 
-// ********** Page Loader *************** //
-// ********** ************ *************** //
 
-// var menu = new Vue({
-//     el: '#menu-bar',
-//     data: {
-//       menuseen: false,
-//       menutext: 'Menu'
-//     },
-//     methods: {
-//         openclosemenu: function (event) {
-//             console.log('test');
-//          this.menuseen = !this.menuseen;
-//          if (this.menutext == 'Menu') {
-//             this.menutext = 'Close';
-//          } 
-//          else {
-//             this.menutext = 'Menu';
-//          }
-//         }
-//       }
-//   });
+
+
+
+
+
+
+/* Financial Wellbeing */
+
+var finTitle = new Vue({
+  el: '#page-title-fin',
+  data: {
+    heading: 'Financial Wellbeing',
+    subheading: 'A Customer Focussed Approach To Finance'
+  }
+});
+
+var finIntro = new Vue({
+  el: '#intro-fin',
+  data: {
+    heading: 'A Brand New Banking Product',
+    subheading: 'A major financial institution needed to deliver a best-in-class experience for their digitally-savvy, socially-conscious customers. But what did their customers need? I helped them find out.',
+    roles: [
+      { message: 'Research' },
+      { message: 'Strategy' },
+      { message: 'Prototyping' }
+    ],
+    agency: 'Invoke',
+    sitetitle: 'Launching 2018',
+    url: ''
+  }
+});
+
+
+/* Phase 1 */
+
+var finphase1 = new Vue({
+  el: '#sect-fin-phase1',
+  data: {
+    bgCol: 'bg-blue2',
+    rhsBgCol: '',
+    heading: 'Phase 1',
+    subheading: 'Customer Research',
+    para: '',
+    imageurl: '',
+    imgshadow: ''
+  }
+});
+
+var finA = new Vue({
+  el: '#sect-fin-journey',
+  data: {
+    bgCol: 'bg-white',
+    rhsBgCol: '',
+    heading: '',
+    subheading: 'The Customer Journey',
+    para: 'Using the expertise of the client team we mapped out the journey of a typical customer. We identified pain points to investigate further through research.',
+    imageurl: 'finance/fin-img-1.jpg',
+    imgshadow: 'boxshadow-1'
+  }
+});
+
+var finB = new Vue({
+  el: '#sect-fin-research',
+  data: {
+    bgCol: 'bg-white',
+    rhsBgCol: '',
+    heading: '',
+    subheading: 'Face-To-Face Interviews',
+    para: 'We took a user-centric approach, running weekly interviews with potential members. It was an eye-opening experience. A wealth of uncomfortable emotions surrounded personal financial management.',
+    imageurl: 'finance/fin-img-2.jpg',
+    imgshadow: 'boxshadow-1'
+  }
+});
+
+
+/* Phase 2 */
+
+var finphase2 = new Vue({
+  el: '#sect-fin-phase2',
+  data: {
+    bgCol: 'bg-blue2',
+    rhsBgCol: '',
+    heading: 'Phase 2',
+    subheading: 'Rapid Prototyping & Testing',
+    para: '',
+    imageurl: '',
+    imgshadow: ''
+  }
+});
+
+
+var finC = new Vue({
+  el: '#sect-fin-save',
+  data: {
+    bgCol: 'bg-white',
+    rhsBgCol: '',
+    heading: '',
+    subheading: 'Spend Less, Save More',
+    para: 'The interviews revealed a real need to help people manage their spending habits. It\'s a space fin-techs are already tackling, but the financial institutions are lagging behind. We saw this as a great strategic opportunity.',
+    imageurl: 'finance/fin-img-3.jpg',
+    imgshadow: 'boxshadow-1'
+  }
+});
+
+var finD = new Vue({
+  el: '#sect-fin-workshop',
+  data: {
+    bgCol: 'bg-white',
+    rhsBgCol: '',
+    heading: '',
+    subheading: 'Design Workshops',
+    para: 'I ran design workshops with the team to generate and refine ideas for prototyping. The client team rose to the challenge of the Crazy 8 sketch process in great form!',
+    imageurl: 'finance/fin-img-4.jpg',
+    imgshadow: 'boxshadow-1'
+  }
+});
+
+
+var finE = new Vue({
+  el: '#sect-fin-proto',
+  data: {
+    bgCol: 'bg-blue1',
+    rhsBgCol: '',
+    heading: '',
+    subheading: 'Rapid Prototyping',
+    para: 'We had lots of ideas that needed validating. I built prototypes on a weekly basis and ran user testing sessions to get both qualitative and quantitative feedback.',
+    imageurl: 'finance/fin-img-phone-1.png',
+    imgshadow: ''
+  }
+});
+
+
+
+/* Phase 3 */
+
+var finphase3 = new Vue({
+  el: '#sect-fin-phase3',
+  data: {
+    bgCol: 'bg-blue2',
+    rhsBgCol: '',
+    heading: 'Phase 3',
+    subheading: 'A Strategy For Financial Fitness',
+    para: '',
+    imageurl: '',
+    imgshadow: ''
+  }
+});
+
+var finF = new Vue({
+  el: '#sect-fin-finresearch',
+  data: {
+    bgCol: 'bg-white',
+    rhsBgCol: '',
+    heading: '',
+    subheading: 'Researching Financial Health',
+    para: 'In order to understand how to better help our customers, we dug into the online research around financial wellbeing, and pulled out valuable metrics we could build into the app experience.',
+    imageurl: 'finance/fin-img-5.jpg',
+    imgshadow: 'boxshadow-1'
+  }
+});
+
+
+
+
+var finG = new Vue({
+  el: '#sect-fin-fitbit',
+  data: {
+    bgCol: 'bg-white',
+    rhsBgCol: '',
+    heading: '',
+    subheading: 'Your Financial Fitbit',
+    para: 'Based on our learnings, and current market trends, our strategy focused on building a financial fitness program, that guides people through the various stages of financial understanding and transformation. The final details of this are still in the the works.',
+    imageurl: 'finance/fin-img-6.jpg',
+    imgshadow: 'boxshadow-1'
+  }
+});
+
+/* Phase 4 */
+
+var finphase4 = new Vue({
+  el: '#sect-fin-phase4',
+  data: {
+    bgCol: 'bg-blue2',
+    rhsBgCol: '',
+    heading: 'Phase 4',
+    subheading: 'Integrating Core Banking',
+    para: '',
+    imageurl: '',
+    imgshadow: ''
+  }
+});
+
+var finH = new Vue({
+  el: '#sect-fin-product',
+  data: {
+    bgCol: 'bg-white',
+    heading: '',
+    subheading: 'A New Type Of Product',
+    para: 'To go with the digital product, the client will be creating a new type of bank account, that helps support the financial habits we aim to encourage.',
+    imageurl: 'finance/fin-img-scroll-1.jpg',
+  }
+});
+
+
+var finI = new Vue({
+  el: '#sect-fin-online',
+  data: {
+    bgCol: 'bg-blue1',
+    rhsBgCol: '',
+    heading: '',
+    subheading: 'Reimagining The Site Architecture',
+    para: 'The new account and app has to integrate with the existing core banking functionality. I worked with the product owner to define the requirements and create a new system architecture.',
+    imageurl: 'finance/fin-img-8.jpg',
+    imgshadow: 'boxshadow-1'
+  }
+});
+
+var finJ = new Vue({
+  el: '#sect-fin-team',
+  data: {
+    bgCol: 'bg-white',
+    rhsBgCol: '',
+    heading: '',
+    subheading: 'A New Team Structure',
+    para: 'To build and launch the product, an Agile Transformation is underway, creating development teams focussed around each segments of the new experience. All systems are go!',
+    imageurl: 'finance/fin-img-7.jpg',
+    imgshadow: 'boxshadow-1'
+  }
+});
+
+
+
+
+
 
 
 setTimeout(function() {
