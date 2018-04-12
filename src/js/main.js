@@ -115,6 +115,18 @@ var cvtitle = new Vue({
 });
 
 var cvjob1 = new Vue({
+  el: '#cv-job-0',
+  data: {
+    company: 'Green Stone',
+    dates: 'Current',
+    role: 'Experience Designer',
+    bullets: [
+
+    ]
+  }
+});
+
+var cvjob1 = new Vue({
   el: '#cv-job-1',
   data: {
     company: 'Invoke',
@@ -192,6 +204,9 @@ var cvSkills = new Vue({
       { message: 'Prototyping' },
       { message: 'Design Workshop Facilitation' },
       { message: 'User Research' },
+      { message: 'Usability Testing' },
+      { message: 'Competitive Research' },
+      { message: 'Service Design' },
       { message: 'Graphic Design' },
       { message: 'Branding' },
       { message: 'Wireframing' },
